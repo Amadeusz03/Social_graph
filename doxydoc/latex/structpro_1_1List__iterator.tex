@@ -1,0 +1,271 @@
+\hypertarget{structpro_1_1List__iterator}{}\doxysection{pro\+::List\+\_\+iterator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structpro_1_1List__iterator}\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+
+
+Iterator class is used to point to element in lists.  
+
+
+
+
+{\ttfamily \#include $<$list.\+h$>$}
+
+
+
+Collaboration diagram for pro\+::List\+\_\+iterator\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{structpro_1_1List__iterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structpro_1_1List__iterator_a6495be36e9d5980b80ccbf9091bd1ccc}{iterator\+\_\+category}} = std\+::bidirectional\+\_\+iterator\+\_\+tag
+\item 
+using \mbox{\hyperlink{structpro_1_1List__iterator_a13ce6f53db2a62d4ccdea11b055c0d76}{difference\+\_\+type}} = ptrdiff\+\_\+t
+\item 
+using \mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} = \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}
+\item 
+using \mbox{\hyperlink{structpro_1_1List__iterator_a045e75674ffc0df04d3a8eefc70df3f0}{value\+\_\+type}} = T
+\item 
+using \mbox{\hyperlink{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}{reference}} = T \&
+\item 
+using \mbox{\hyperlink{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}{pointer}} = T $\ast$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_a49299fd316b3ad36dc5b8ca7e4426697}{List\+\_\+iterator}} ()=default
+\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_ab8362a97e8b006fa85617a2a6b7f5955}{List\+\_\+iterator}} (\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal\+::\+Base\+\_\+node}} $\ast$init)
+\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \& \mbox{\hyperlink{structpro_1_1List__iterator_aed4d34badeb87d6c891e386a3130e9ad}{operator++}} ()
+\begin{DoxyCompactList}\small\item\em Moving to next element in rane. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \mbox{\hyperlink{structpro_1_1List__iterator_a1cd5a1104c4544f015cd656fd7173164}{operator++}} (int)
+\begin{DoxyCompactList}\small\item\em Moving to next element in rane(postfix). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \mbox{\hyperlink{structpro_1_1List__iterator_a242ea6676d3c4e1a4e5bbbc714590d77}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Moving to previous element in rane(postfix). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \& \mbox{\hyperlink{structpro_1_1List__iterator_a4fef97aab39d3b9eeadc9488e26f58e2}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Moving to previous element in rane. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpro_1_1List__iterator_a26ea0d8ac40f518b0795cf507d861267}{operator==}} (const \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparing two iterators. Checks if both are pointing to the same element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structpro_1_1List__iterator_a7b9633a434654722145450e13510e4b5}{operator!=}} (const \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}} \&other) const
+\begin{DoxyCompactList}\small\item\em Opposite as in \mbox{\hyperlink{structpro_1_1List__iterator_a26ea0d8ac40f518b0795cf507d861267}{operator==()}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}{reference}} \mbox{\hyperlink{structpro_1_1List__iterator_a6392533cb8bfa3e23a4f6531ac93902a}{operator$\ast$}} () const
+\begin{DoxyCompactList}\small\item\em Referencing to value in element that is pointed by iterator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}{pointer}} \mbox{\hyperlink{structpro_1_1List__iterator_a84c947bd3a19cf63368ae27502e68dc2}{operator-\/$>$}} () const
+\begin{DoxyCompactList}\small\item\em Referencing to members of element that is pointed by iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal\+::\+Base\+\_\+node}} $\ast$ \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct pro\+::\+List\+\_\+iterator$<$ T $>$}
+Iterator class is used to point to element in lists. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a13ce6f53db2a62d4ccdea11b055c0d76}\label{structpro_1_1List__iterator_a13ce6f53db2a62d4ccdea11b055c0d76}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!difference\_type@{difference\_type}}
+\index{difference\_type@{difference\_type}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{difference\_type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::difference\+\_\+type =  ptrdiff\+\_\+t}
+
+\mbox{\Hypertarget{structpro_1_1List__iterator_a6495be36e9d5980b80ccbf9091bd1ccc}\label{structpro_1_1List__iterator_a6495be36e9d5980b80ccbf9091bd1ccc}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!iterator\_category@{iterator\_category}}
+\index{iterator\_category@{iterator\_category}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{iterator\_category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::iterator\+\_\+category =  std\+::bidirectional\+\_\+iterator\+\_\+tag}
+
+\mbox{\Hypertarget{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}\label{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::pointer =  T $\ast$}
+
+\mbox{\Hypertarget{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}\label{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!reference@{reference}}
+\index{reference@{reference}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::reference =  T \&}
+
+\mbox{\Hypertarget{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}\label{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!self@{self}}
+\index{self@{self}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{self}{self}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::self =  \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}}
+
+\mbox{\Hypertarget{structpro_1_1List__iterator_a045e75674ffc0df04d3a8eefc70df3f0}\label{structpro_1_1List__iterator_a045e75674ffc0df04d3a8eefc70df3f0}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::value\+\_\+type =  T}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a49299fd316b3ad36dc5b8ca7e4426697}\label{structpro_1_1List__iterator_a49299fd316b3ad36dc5b8ca7e4426697}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!List\_iterator@{List\_iterator}}
+\index{List\_iterator@{List\_iterator}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{List\_iterator()}{List\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::\+List\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structpro_1_1List__iterator_ab8362a97e8b006fa85617a2a6b7f5955}\label{structpro_1_1List__iterator_ab8362a97e8b006fa85617a2a6b7f5955}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!List\_iterator@{List\_iterator}}
+\index{List\_iterator@{List\_iterator}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{List\_iterator()}{List\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::\+List\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal\+::\+Base\+\_\+node}} $\ast$}]{init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a7b9633a434654722145450e13510e4b5}\label{structpro_1_1List__iterator_a7b9633a434654722145450e13510e4b5}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opposite as in \mbox{\hyperlink{structpro_1_1List__iterator_a26ea0d8ac40f518b0795cf507d861267}{operator==()}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other iterator to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pointing at same element, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a6392533cb8bfa3e23a4f6531ac93902a}\label{structpro_1_1List__iterator_a6392533cb8bfa3e23a4f6531ac93902a}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}{reference}} \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Referencing to value in element that is pointed by iterator. 
+
+\begin{DoxyReturn}{Returns}
+Reference to value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_aed4d34badeb87d6c891e386a3130e9ad}\label{structpro_1_1List__iterator_aed4d34badeb87d6c891e386a3130e9ad}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \& \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moving to next element in rane. 
+
+\begin{DoxyReturn}{Returns}
+$\ast$this, reference to moved iterator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a1cd5a1104c4544f015cd656fd7173164}\label{structpro_1_1List__iterator_a1cd5a1104c4544f015cd656fd7173164}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moving to next element in rane(postfix). 
+
+\begin{DoxyReturn}{Returns}
+An iterator that point to old value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a4fef97aab39d3b9eeadc9488e26f58e2}\label{structpro_1_1List__iterator_a4fef97aab39d3b9eeadc9488e26f58e2}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \& \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moving to previous element in rane. 
+
+\begin{DoxyReturn}{Returns}
+$\ast$this, reference to moved iterator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a242ea6676d3c4e1a4e5bbbc714590d77}\label{structpro_1_1List__iterator_a242ea6676d3c4e1a4e5bbbc714590d77}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator_ad042a4c0c6ee3f20d3a0e8fcbca9737a}{self}} \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moving to previous element in rane(postfix). 
+
+\begin{DoxyReturn}{Returns}
+An iterator that point to old value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a84c947bd3a19cf63368ae27502e68dc2}\label{structpro_1_1List__iterator_a84c947bd3a19cf63368ae27502e68dc2}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}{pointer}} \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Referencing to members of element that is pointed by iterator. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to member. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a26ea0d8ac40f518b0795cf507d861267}\label{structpro_1_1List__iterator_a26ea0d8ac40f518b0795cf507d861267}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparing two iterators. Checks if both are pointing to the same element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other iterator to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if pointing at the same element, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}\label{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}} 
+\index{pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}!node@{node}}
+\index{node@{node}!pro::List\_iterator$<$ T $>$@{pro::List\_iterator$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal\+::\+Base\+\_\+node}}$\ast$ \mbox{\hyperlink{structpro_1_1List__iterator}{pro\+::\+List\+\_\+iterator}}$<$ T $>$\+::node}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{list_8h}{list.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+<map id="pro::list::end" name="pro::list::end">
+<area shape="rect" id="node1" title="Returns iterator that points to last elemeint in the list." alt="" coords="551,113,653,140"/>
+<area shape="rect" id="node2" href="$classDataInput.html#a998d783eddb0ae34b3643e39615d6f26" title="Extracting data from files. Using fstreams. First line is main person, and every other line is friend..." alt="" coords="108,37,255,64"/>
+<area shape="rect" id="node4" href="$classGraphWidget.html#afdd0fbed8ff67de6360046d202baca98" title=" " alt="" coords="303,37,503,64"/>
+<area shape="rect" id="node5" href="$classpro_1_1list.html#a169ea72cc0ee828e5845dba2f075ed85" title="Put new lement at back of the list." alt="" coords="329,88,477,114"/>
+<area shape="rect" id="node6" href="$classpro_1_1list.html#a24150f762a7253a6cc592e9c1c4fb32c" title="Delete all elemnts which have given value." alt="" coords="338,138,467,165"/>
+<area shape="rect" id="node7" href="$classpro_1_1list.html#acc3beab27d493b6f3f75ddb6bbe3b21b" title="Remove elements if given condition is fulfilled." alt="" coords="330,189,475,216"/>
+<area shape="rect" id="node8" href="$classpro_1_1list.html#a2522a7c01a8a1ee9e995cc59aa491d38" title="Sorts elements in the list." alt="" coords="351,240,455,266"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,37,60,64"/>
+</map>

@@ -1,0 +1,169 @@
+\hypertarget{classEdge}{}\doxysection{Edge Class Reference}
+\label{classEdge}\index{Edge@{Edge}}
+
+
+\mbox{\hyperlink{classEdge}{Edge}} is a class representing single edge on graph. Every edge has source and destination.  
+
+
+
+
+{\ttfamily \#include $<$edge.\+h$>$}
+
+
+
+Inheritance diagram for Edge\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classEdge__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Edge\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classEdge__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classEdge_a1076c24a9c10f5e019ee362060200329a59a3ef5ffd963601ffda52bb7bf42b3c}{Type}} = User\+Type + 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEdge_a2d28ba5ca3502b2134f7d2587e57cae7}{Edge}} (\mbox{\hyperlink{classNode}{Node}} $\ast$\mbox{\hyperlink{classEdge_aa620dd494d9ad75a10e2800407478097}{source\+Node}}, \mbox{\hyperlink{classNode}{Node}} $\ast$\mbox{\hyperlink{classEdge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}{dest\+Node}})
+\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classEdge_aa620dd494d9ad75a10e2800407478097}{source\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Retruns \mbox{\hyperlink{classNode}{Node}} that is source in ths edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classEdge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}{dest\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Retruns \mbox{\hyperlink{classNode}{Node}} that is destination in ths edge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEdge_ab554a765fd7a57fcdf289aa51b4df328}{adjust}} ()
+\begin{DoxyCompactList}\small\item\em Function to adjust starting and ending points of edges, to not overlap with nodes. Some magic math inside. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEdge_a9ae46eb35e91e2253434274458aaec55}{type}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QRectF \mbox{\hyperlink{classEdge_a414eb7f63b639f571e71f1e42198a795}{bounding\+Rect}} () const override
+\item 
+void \mbox{\hyperlink{classEdge_a5ac25b0482fff6c68924031695fe4da7}{paint}} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classEdge}{Edge}} is a class representing single edge on graph. Every edge has source and destination. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classEdge_a1076c24a9c10f5e019ee362060200329}\label{classEdge_a1076c24a9c10f5e019ee362060200329}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type@{Type}!Edge@{Edge}}\index{Edge@{Edge}!Type@{Type}}}\mbox{\Hypertarget{classEdge_a1076c24a9c10f5e019ee362060200329a59a3ef5ffd963601ffda52bb7bf42b3c}\label{classEdge_a1076c24a9c10f5e019ee362060200329a59a3ef5ffd963601ffda52bb7bf42b3c}} 
+Type&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEdge_a2d28ba5ca3502b2134f7d2587e57cae7}\label{classEdge_a2d28ba5ca3502b2134f7d2587e57cae7}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNode}{Node}} $\ast$}]{source\+Node,  }\item[{\mbox{\hyperlink{classNode}{Node}} $\ast$}]{dest\+Node }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEdge_a2d28ba5ca3502b2134f7d2587e57cae7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEdge_ab554a765fd7a57fcdf289aa51b4df328}\label{classEdge_ab554a765fd7a57fcdf289aa51b4df328}} 
+\index{Edge@{Edge}!adjust@{adjust}}
+\index{adjust@{adjust}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{adjust()}{adjust()}}
+{\footnotesize\ttfamily void Edge\+::adjust (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to adjust starting and ending points of edges, to not overlap with nodes. Some magic math inside. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classEdge_ab554a765fd7a57fcdf289aa51b4df328_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEdge_ab554a765fd7a57fcdf289aa51b4df328_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEdge_a414eb7f63b639f571e71f1e42198a795}\label{classEdge_a414eb7f63b639f571e71f1e42198a795}} 
+\index{Edge@{Edge}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily QRectF Edge\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classEdge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}\label{classEdge_a3c9de73a06f270ffc6d3a6ff2ba5d4c6}} 
+\index{Edge@{Edge}!destNode@{destNode}}
+\index{destNode@{destNode}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{destNode()}{destNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}} $\ast$ Edge\+::dest\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retruns \mbox{\hyperlink{classNode}{Node}} that is destination in ths edge. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \mbox{\hyperlink{classNode}{Node}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEdge_a5ac25b0482fff6c68924031695fe4da7}\label{classEdge_a5ac25b0482fff6c68924031695fe4da7}} 
+\index{Edge@{Edge}!paint@{paint}}
+\index{paint@{paint}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Edge\+::paint (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QStyle\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{QWidget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classEdge_aa620dd494d9ad75a10e2800407478097}\label{classEdge_aa620dd494d9ad75a10e2800407478097}} 
+\index{Edge@{Edge}!sourceNode@{sourceNode}}
+\index{sourceNode@{sourceNode}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{sourceNode()}{sourceNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}} $\ast$ Edge\+::source\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retruns \mbox{\hyperlink{classNode}{Node}} that is source in ths edge. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to \mbox{\hyperlink{classNode}{Node}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEdge_a9ae46eb35e91e2253434274458aaec55}\label{classEdge_a9ae46eb35e91e2253434274458aaec55}} 
+\index{Edge@{Edge}!type@{type}}
+\index{type@{type}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily int Edge\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{edge_8h}{edge.\+h}}\item 
+source/\mbox{\hyperlink{edge_8cpp}{edge.\+cpp}}\end{DoxyCompactItemize}

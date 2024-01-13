@@ -1,0 +1,32 @@
+\hypertarget{person_8h_source}{}\doxysection{person.\+h}
+\label{person_8h_source}\index{source/person.h@{source/person.h}}
+\mbox{\hyperlink{person_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PERSON\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PERSON\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{list_8h}{list.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{node_8h}{node.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classPerson}{Person}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{classPerson_a236d2bb0b0df0916a7d7affa5aac83c9}{Person}}( ) = \textcolor{keywordflow}{default}; \textcolor{comment}{// default constructor}}
+\DoxyCodeLine{15     \mbox{\hyperlink{classPerson_ac0999834b6e37691dd8d09e617c91cea}{Person}}(std::string input\_firstname, std::string input\_lastname)}
+\DoxyCodeLine{16         : firstname(input\_firstname), lastname(input\_lastname)}
+\DoxyCodeLine{17     \{ \}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPerson_a33249b964bb6a274fd70fc77e23022c7}{addfriend}}(\mbox{\hyperlink{classPerson}{Person}}* myFriend);}
+\DoxyCodeLine{19     std::string \mbox{\hyperlink{classPerson_a026e666a43ae4261b102d653b5b528eb}{getData}}( );}
+\DoxyCodeLine{20     std::vector<Person*>\& \mbox{\hyperlink{classPerson_a0b64f4122c526a4fed01c483b573f9bf}{getFriends}}( );}
+\DoxyCodeLine{21     std::vector<Node*> \mbox{\hyperlink{classPerson_a3423534d04882f8f741fbe4d902c874c}{friends\_ptr}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     std::string firstname;}
+\DoxyCodeLine{25     std::string lastname;}
+\DoxyCodeLine{26     std::vector<Person*> friends;}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PERSON\_H}}
+
+\end{DoxyCode}

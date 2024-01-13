@@ -1,0 +1,4 @@
+<map id="Edge::adjust" name="Edge::adjust">
+<area shape="rect" id="node1" title="Function to adjust starting and ending points of edges, to not overlap with nodes...." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$classNode.html#a07ef0b35412d954c6e585c25377830ff" title="Returns list of edges connected to this node." alt="" coords="156,5,259,32"/>
+</map>

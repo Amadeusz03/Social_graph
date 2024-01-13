@@ -1,0 +1,52 @@
+\hypertarget{node_8h_source}{}\doxysection{node.\+h}
+\label{node_8h_source}\index{source/node.h@{source/node.h}}
+\mbox{\hyperlink{node_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NODE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NODE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QGraphicsItem>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QStyleOptionGraphicsItem>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QStyle>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QLabel>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QGraphicsTextItem>}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classEdge}{Edge}};}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classGraphWidget}{GraphWidget}};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classNode}{Node}} : \textcolor{keyword}{public} \mbox{\hyperlink{classQGraphicsItem}{QGraphicsItem}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{classNode_a1090d2bb7bd9193be765a03984b7b101}{Node}}(\mbox{\hyperlink{classGraphWidget}{GraphWidget}} *graphWidget);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNode_af761aaef36a761a90c4f148a6add914d}{addEdge}}(\mbox{\hyperlink{classEdge}{Edge}} *edge);}
+\DoxyCodeLine{21     QList<Edge *> \mbox{\hyperlink{classNode_a07ef0b35412d954c6e585c25377830ff}{edges}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{enum} \{ \mbox{\hyperlink{classNode_ae716c5198bdf4b0a810324756b0f8f11a0df509db5bcc8da1ec6af739b50791b5}{Type}} = UserType + 1 \};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{classNode_af48418d690ba7a21aea37168beaa865a}{type}}()\textcolor{keyword}{ const override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classNode_ae716c5198bdf4b0a810324756b0f8f11a0df509db5bcc8da1ec6af739b50791b5}{Type}}; \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNode_ad072483ca1a8d884964cddef6b3e7f6f}{calculateForces}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classNode_a60605ce8c5281cad180745359f833cc4}{advancePosition}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     QRectF \mbox{\hyperlink{classNode_a327ee966db1211cee4b9759bd928580a}{boundingRect}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{30     QPainterPath \mbox{\hyperlink{classNode_a0b1a8467340a3554ac57b43f56a90818}{shape}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNode_a35fd12d92a7ca5d7679c81ab6747a764}{paint}}(QPainter *painter, \textcolor{keyword}{const} QStyleOptionGraphicsItem *option, QWidget *widget) \textcolor{keyword}{override};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNode_ad79c3b9932a19a9f0d354584bb4e1b88}{addNames}}(std::string input);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{37     QVariant \mbox{\hyperlink{classNode_a18959a6037e96225835e07a32b4024ed}{itemChange}}(GraphicsItemChange change, \textcolor{keyword}{const} QVariant \&value) \textcolor{keyword}{override};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNode_a2412d8007e9fd9cd1e3bf7afee57906e}{mousePressEvent}}(QGraphicsSceneMouseEvent *event) \textcolor{keyword}{override};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{classNode_afc1bc6e8ea97c95e6ced177e828f70e9}{mouseReleaseEvent}}(QGraphicsSceneMouseEvent *event) \textcolor{keyword}{override};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{43     QList<Edge *> edgeList;}
+\DoxyCodeLine{44     QPointF newPos;}
+\DoxyCodeLine{45     \mbox{\hyperlink{classGraphWidget}{GraphWidget}} *graph;}
+\DoxyCodeLine{46     std::string names;}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODE\_H}}
+
+\end{DoxyCode}

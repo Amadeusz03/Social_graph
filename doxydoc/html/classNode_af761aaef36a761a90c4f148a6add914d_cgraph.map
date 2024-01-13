@@ -1,0 +1,5 @@
+<map id="Node::addEdge" name="Node::addEdge">
+<area shape="rect" id="node1" title="Adding edge to this node." alt="" coords="5,5,125,32"/>
+<area shape="rect" id="node2" href="$classEdge.html#ab554a765fd7a57fcdf289aa51b4df328" title="Function to adjust starting and ending points of edges, to not overlap with nodes...." alt="" coords="173,5,276,32"/>
+<area shape="rect" id="node3" href="$classNode.html#a07ef0b35412d954c6e585c25377830ff" title="Returns list of edges connected to this node." alt="" coords="324,5,427,32"/>
+</map>

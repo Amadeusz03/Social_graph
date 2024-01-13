@@ -1,0 +1,7 @@
+<map id="pro::list::remove" name="pro::list::remove">
+<area shape="rect" id="node1" title="Delete all elemnts which have given value." alt="" coords="5,56,135,83"/>
+<area shape="rect" id="node2" href="$classpro_1_1list.html#a00dc44b7d0f7af16cb5dcbcf106c0ee3" title="Returns iterator that points to first elemeint in the list." alt="" coords="183,5,297,32"/>
+<area shape="rect" id="node3" href="$classpro_1_1list.html#a1a1e4328369c79b809f66794c7f7a3cd" title="Returns iterator that points to last elemeint in the list." alt="" coords="189,56,291,83"/>
+<area shape="rect" id="node4" href="$classpro_1_1list.html#acdd17d748cdadeafc3a2f80a5e95926e" title="Deletes element of list pointed by iterator." alt="" coords="183,107,297,133"/>
+<area shape="rect" id="node5" href="$structpro_1_1internal_1_1Base__node.html#afacbf953c4d56c8656926f9c073f5da7" title=" " alt="" coords="345,99,504,141"/>
+</map>

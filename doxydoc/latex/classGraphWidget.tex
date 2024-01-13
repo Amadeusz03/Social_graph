@@ -1,0 +1,151 @@
+\hypertarget{classGraphWidget}{}\doxysection{Graph\+Widget Class Reference}
+\label{classGraphWidget}\index{GraphWidget@{GraphWidget}}
+
+
+\mbox{\hyperlink{classGraphWidget}{Graph\+Widget}} is class that represents whole social graph. Inherited from \mbox{\hyperlink{classQGraphicsView}{QGraphics\+View}}. Containg Q\+\_\+\+OBJECT macro.  
+
+
+
+
+{\ttfamily \#include $<$graphwidget.\+h$>$}
+
+
+
+Inheritance diagram for Graph\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classGraphWidget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Graph\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classGraphWidget__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGraphWidget_a94cefa954ea4d5a189e129aee5d032aa}{button\+Clicked}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraphWidget_afdd0fbed8ff67de6360046d202baca98}{Graph\+Widget}} (\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ \mbox{\hyperlink{classPerson}{Person}} $>$ \&data, QWidget $\ast$parent=nullptr)
+\item 
+void \mbox{\hyperlink{classGraphWidget_a3151de180b65d71f424aba5bc274978e}{item\+Moved}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classGraphWidget_a539307407f2cb69f94e7bbbc4aa97190}{forces\+Enabled}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGraphWidget_ac62c85e6775020bf5820048f0e02025d}{key\+Press\+Event}} (QKey\+Event $\ast$event) override
+\item 
+void \mbox{\hyperlink{classGraphWidget_a206371195f6df1aaf5bd9b738085da9c}{timer\+Event}} (QTimer\+Event $\ast$event) override
+\item 
+void \mbox{\hyperlink{classGraphWidget_a900dc01eeaed285841280ece387f6c5a}{draw\+Background}} (QPainter $\ast$painter, const QRectF \&rect) override
+\item 
+void \mbox{\hyperlink{classGraphWidget_a53052eaaed3777d102e6659e3357983e}{scale\+View}} (qreal scale\+Factor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classGraphWidget}{Graph\+Widget}} is class that represents whole social graph. Inherited from \mbox{\hyperlink{classQGraphicsView}{QGraphics\+View}}. Containg Q\+\_\+\+OBJECT macro. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraphWidget_afdd0fbed8ff67de6360046d202baca98}\label{classGraphWidget_afdd0fbed8ff67de6360046d202baca98}} 
+\index{GraphWidget@{GraphWidget}!GraphWidget@{GraphWidget}}
+\index{GraphWidget@{GraphWidget}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{GraphWidget()}{GraphWidget()}}
+{\footnotesize\ttfamily Graph\+Widget\+::\+Graph\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ \mbox{\hyperlink{classPerson}{Person}} $>$ \&}]{data,  }\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+possible bloat
+
+change to populate in circle around one nodeHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGraphWidget_afdd0fbed8ff67de6360046d202baca98_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraphWidget_a94cefa954ea4d5a189e129aee5d032aa}\label{classGraphWidget_a94cefa954ea4d5a189e129aee5d032aa}} 
+\index{GraphWidget@{GraphWidget}!buttonClicked@{buttonClicked}}
+\index{buttonClicked@{buttonClicked}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{buttonClicked}{buttonClicked}}
+{\footnotesize\ttfamily void Graph\+Widget\+::button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGraphWidget_a94cefa954ea4d5a189e129aee5d032aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGraphWidget_a900dc01eeaed285841280ece387f6c5a}\label{classGraphWidget_a900dc01eeaed285841280ece387f6c5a}} 
+\index{GraphWidget@{GraphWidget}!drawBackground@{drawBackground}}
+\index{drawBackground@{drawBackground}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{drawBackground()}{drawBackground()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::draw\+Background (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QRectF \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGraphWidget_a3151de180b65d71f424aba5bc274978e}\label{classGraphWidget_a3151de180b65d71f424aba5bc274978e}} 
+\index{GraphWidget@{GraphWidget}!itemMoved@{itemMoved}}
+\index{itemMoved@{itemMoved}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{itemMoved()}{itemMoved()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::item\+Moved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGraphWidget_a3151de180b65d71f424aba5bc274978e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGraphWidget_ac62c85e6775020bf5820048f0e02025d}\label{classGraphWidget_ac62c85e6775020bf5820048f0e02025d}} 
+\index{GraphWidget@{GraphWidget}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGraphWidget_a53052eaaed3777d102e6659e3357983e}\label{classGraphWidget_a53052eaaed3777d102e6659e3357983e}} 
+\index{GraphWidget@{GraphWidget}!scaleView@{scaleView}}
+\index{scaleView@{scaleView}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{scaleView()}{scaleView()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::scale\+View (\begin{DoxyParamCaption}\item[{qreal}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGraphWidget_a206371195f6df1aaf5bd9b738085da9c}\label{classGraphWidget_a206371195f6df1aaf5bd9b738085da9c}} 
+\index{GraphWidget@{GraphWidget}!timerEvent@{timerEvent}}
+\index{timerEvent@{timerEvent}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{timerEvent()}{timerEvent()}}
+{\footnotesize\ttfamily void Graph\+Widget\+::timer\+Event (\begin{DoxyParamCaption}\item[{QTimer\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGraphWidget_a539307407f2cb69f94e7bbbc4aa97190}\label{classGraphWidget_a539307407f2cb69f94e7bbbc4aa97190}} 
+\index{GraphWidget@{GraphWidget}!forcesEnabled@{forcesEnabled}}
+\index{forcesEnabled@{forcesEnabled}!GraphWidget@{GraphWidget}}
+\doxysubsubsection{\texorpdfstring{forcesEnabled}{forcesEnabled}}
+{\footnotesize\ttfamily bool Graph\+Widget\+::forces\+Enabled}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{graphwidget_8h}{graphwidget.\+h}}\item 
+source/\mbox{\hyperlink{graphwidget_8cpp}{graphwidget.\+cpp}}\end{DoxyCompactItemize}

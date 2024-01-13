@@ -1,0 +1,6 @@
+<map id="Person" name="Person">
+<area shape="rect" id="node1" title="Person is class representing persons in graph." alt="" coords="38,588,153,724"/>
+<area shape="rect" id="node2" title=" " alt="" coords="12,448,179,525"/>
+<area shape="rect" id="node3" href="$classNode.html" title="Node is class representing single node on graph. Has name, and is linked by edge to another nodes." alt="" coords="5,132,185,385"/>
+<area shape="rect" id="node4" href="$classQGraphicsItem.html" title=" " alt="" coords="36,5,155,83"/>
+</map>

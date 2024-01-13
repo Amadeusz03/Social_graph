@@ -1,0 +1,6 @@
+<map id="pro::list::pop_front" name="pro::list::pop_front">
+<area shape="rect" id="node1" title="Deletes first element of list." alt="" coords="5,31,147,57"/>
+<area shape="rect" id="node2" href="$classpro_1_1list.html#a00dc44b7d0f7af16cb5dcbcf106c0ee3" title="Returns iterator that points to first elemeint in the list." alt="" coords="195,5,309,32"/>
+<area shape="rect" id="node3" href="$classpro_1_1list.html#acdd17d748cdadeafc3a2f80a5e95926e" title="Deletes element of list pointed by iterator." alt="" coords="195,56,309,83"/>
+<area shape="rect" id="node4" href="$structpro_1_1internal_1_1Base__node.html#afacbf953c4d56c8656926f9c073f5da7" title=" " alt="" coords="357,49,516,90"/>
+</map>

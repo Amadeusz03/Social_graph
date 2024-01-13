@@ -1,0 +1,9 @@
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/social_graphs.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/edit_cache.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/rebuild_cache.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/list_install_components.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/install.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/install/local.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/install/strip.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/social_graphs_autogen_timestamp_deps.dir
+/home/kris/cpp/social_graphs_project/build/CMakeFiles/social_graphs_autogen.dir

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classQGraphicsItem.html" title=" " alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node2" href="$classEdge.html" title="Edge is a class representing single edge on graph. Every edge has source and destination." alt="" coords="173,5,227,32"/>
+<area shape="rect" id="node3" href="$classNode.html" title="Node is class representing single node on graph. Has name, and is linked by edge to another nodes." alt="" coords="172,56,228,83"/>
+</map>

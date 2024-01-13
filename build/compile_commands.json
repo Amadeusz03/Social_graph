@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o -c /home/kris/cpp/social_graphs_project/build/social_graphs_autogen/mocs_compilation.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/main.cpp.o -c /home/kris/cpp/social_graphs_project/source/main.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/main.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/mainwindow.cpp.o -c /home/kris/cpp/social_graphs_project/source/mainwindow.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/mainwindow.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o -c /home/kris/cpp/social_graphs_project/source/graphwidget.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/graphwidget.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/node.cpp.o -c /home/kris/cpp/social_graphs_project/source/node.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/node.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/edge.cpp.o -c /home/kris/cpp/social_graphs_project/source/edge.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/edge.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/person.cpp.o -c /home/kris/cpp/social_graphs_project/source/person.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/person.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/datainput.cpp.o -c /home/kris/cpp/social_graphs_project/source/datainput.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/datainput.cpp"
+}
+]

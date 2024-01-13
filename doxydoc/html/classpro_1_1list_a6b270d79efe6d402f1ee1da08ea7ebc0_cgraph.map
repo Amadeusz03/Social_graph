@@ -1,0 +1,5 @@
+<map id="pro::list::push_front" name="pro::list::push_front">
+<area shape="rect" id="node1" title="Put new element in front of the list." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node2" href="$classpro_1_1list.html#a00dc44b7d0f7af16cb5dcbcf106c0ee3" title="Returns iterator that points to first elemeint in the list." alt="" coords="202,5,317,32"/>
+<area shape="rect" id="node3" href="$classpro_1_1list.html#a19f4d6252ff3a486078246d8bba869ae" title="Inserts new element at the specified position." alt="" coords="201,56,317,83"/>
+</map>

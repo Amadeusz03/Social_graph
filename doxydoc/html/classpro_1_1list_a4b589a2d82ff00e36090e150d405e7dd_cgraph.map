@@ -1,0 +1,5 @@
+<map id="pro::list::sort" name="pro::list::sort">
+<area shape="rect" id="node1" title="Sorts elements in the list." alt="" coords="5,31,109,57"/>
+<area shape="rect" id="node2" href="$classpro_1_1list.html#a00dc44b7d0f7af16cb5dcbcf106c0ee3" title="Returns iterator that points to first elemeint in the list." alt="" coords="157,5,272,32"/>
+<area shape="rect" id="node3" href="$classpro_1_1list.html#a1a1e4328369c79b809f66794c7f7a3cd" title="Returns iterator that points to last elemeint in the list." alt="" coords="163,56,266,83"/>
+</map>

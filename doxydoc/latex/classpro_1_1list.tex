@@ -1,0 +1,517 @@
+\hypertarget{classpro_1_1list}{}\doxysection{pro\+::list\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{classpro_1_1list}\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+
+
+Container type of two-\/way linked list.  
+
+
+
+
+{\ttfamily \#include $<$list.\+h$>$}
+
+
+
+Inheritance diagram for pro\+::list\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classpro_1_1list__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pro\+::list\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classpro_1_1list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classpro_1_1list_ab5233dd07f6e8a1afba08b6dd2fc95ec}{value\+\_\+type}} = T
+\item 
+using \mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} = T \&
+\item 
+using \mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}} = const T \&
+\item 
+using \mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} = \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}$<$ T $>$
+\item 
+using \mbox{\hyperlink{classpro_1_1list_a40d5ab72ec08d6e29857d87918bc84d0}{const\+\_\+iterator}} = const \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}$<$ T $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpro_1_1list_a208c2313b893357c610f1732dce01997}{list}} ()
+\begin{DoxyCompactList}\small\item\em Constructor, sets all pointers to nullnext. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpro_1_1list_a99c9191b56871180ca17b7826eb9e57a}{$\sim$list}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor, deletes all elements in list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_a6b270d79efe6d402f1ee1da08ea7ebc0}{push\+\_\+front}} (\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}} obj)
+\begin{DoxyCompactList}\small\item\em Put new element in front of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_a169ea72cc0ee828e5845dba2f075ed85}{push\+\_\+back}} (\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}} obj)
+\begin{DoxyCompactList}\small\item\em Put new lement at back of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} \mbox{\hyperlink{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae}{insert}} (\mbox{\hyperlink{classpro_1_1list_a40d5ab72ec08d6e29857d87918bc84d0}{const\+\_\+iterator}} pos, \mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}} obj)
+\begin{DoxyCompactList}\small\item\em Inserts new element at the specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_a67c4600873df57381757f8bb71eecd4a}{pop\+\_\+front}} ()
+\begin{DoxyCompactList}\small\item\em Deletes first element of list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_a59155c23c2bd7aa7f041076d01dd1f05}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Deletes last element of list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}{erase}} (\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} iter)
+\begin{DoxyCompactList}\small\item\em Deletes element of list pointed by iterator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_a24150f762a7253a6cc592e9c1c4fb32c}{remove}} (\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}} val)
+\begin{DoxyCompactList}\small\item\em Delete all elemnts which have given value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Predicate $>$ }\\void \mbox{\hyperlink{classpro_1_1list_acc3beab27d493b6f3f75ddb6bbe3b21b}{remove\+\_\+if}} (Predicate pred)
+\begin{DoxyCompactList}\small\item\em Remove elements if given condition is fulfilled. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classpro_1_1list_aa56316c87ae0a57bbd8b5d0a49d2d637}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns how many elements list contains. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classpro_1_1list_a22ec1c657e8ba787236bc1e78a532837}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the list is empty. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Compare $>$ }\\void \mbox{\hyperlink{classpro_1_1list_a2522a7c01a8a1ee9e995cc59aa491d38}{sort}} (Compare comp)
+\begin{DoxyCompactList}\small\item\em Sorts elements in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpro_1_1list_a4b589a2d82ff00e36090e150d405e7dd}{sort}} ()
+\begin{DoxyCompactList}\small\item\em Sorts elements in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} \mbox{\hyperlink{classpro_1_1list_ac9dbd9ba54835778d7f87e5959be0aee}{front}} ()
+\item 
+\mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} \mbox{\hyperlink{classpro_1_1list_a5cb876323c7bcbc759566e1d17f26a95}{back}} ()
+\item 
+\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns iterator that points to first elemeint in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns iterator that points to last elemeint in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class pro\+::list$<$ T $>$}
+Container type of two-\/way linked list. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of elements that list contains. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpro_1_1list_a40d5ab72ec08d6e29857d87918bc84d0}\label{classpro_1_1list_a40d5ab72ec08d6e29857d87918bc84d0}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!const\_iterator@{const\_iterator}}
+\index{const\_iterator@{const\_iterator}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::const\+\_\+iterator =  const \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}$<$T$>$}
+
+\mbox{\Hypertarget{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}\label{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::const\+\_\+reference =  const T \&}
+
+\mbox{\Hypertarget{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}\label{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!iterator@{iterator}}
+\index{iterator@{iterator}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::iterator =  \mbox{\hyperlink{structpro_1_1List__iterator}{List\+\_\+iterator}}$<$T$>$}
+
+\mbox{\Hypertarget{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}\label{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!reference@{reference}}
+\index{reference@{reference}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::reference =  T \&}
+
+\mbox{\Hypertarget{classpro_1_1list_ab5233dd07f6e8a1afba08b6dd2fc95ec}\label{classpro_1_1list_ab5233dd07f6e8a1afba08b6dd2fc95ec}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::value\+\_\+type =  T}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpro_1_1list_a208c2313b893357c610f1732dce01997}\label{classpro_1_1list_a208c2313b893357c610f1732dce01997}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!list@{list}}
+\index{list@{list}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor, sets all pointers to nullnext. 
+
+\mbox{\Hypertarget{classpro_1_1list_a99c9191b56871180ca17b7826eb9e57a}\label{classpro_1_1list_a99c9191b56871180ca17b7826eb9e57a}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!````~list@{$\sim$list}}
+\index{````~list@{$\sim$list}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$list()}{~list()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classpro_1_1list}{list}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor, deletes all elements in list. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpro_1_1list_a5cb876323c7bcbc759566e1d17f26a95}\label{classpro_1_1list_a5cb876323c7bcbc759566e1d17f26a95}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!back@{back}}
+\index{back@{back}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a5cb876323c7bcbc759566e1d17f26a95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}\label{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns iterator that points to first elemeint in the list. 
+
+\begin{DoxyReturn}{Returns}
+iterator to fist element of list. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a22ec1c657e8ba787236bc1e78a532837}\label{classpro_1_1list_a22ec1c657e8ba787236bc1e78a532837}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the list is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}\label{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!end@{end}}
+\index{end@{end}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns iterator that points to last elemeint in the list. 
+
+\begin{DoxyReturn}{Returns}
+iterator to last element of list. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}\label{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}}}]{iter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes element of list pointed by iterator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iter} & Which element to delete. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_ac9dbd9ba54835778d7f87e5959be0aee}\label{classpro_1_1list_ac9dbd9ba54835778d7f87e5959be0aee}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!front@{front}}
+\index{front@{front}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae}\label{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}} \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list_a40d5ab72ec08d6e29857d87918bc84d0}{const\+\_\+iterator}}}]{pos,  }\item[{\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts new element at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position where to put new element. \\
+\hline
+{\em val} & Value to be copied to the new element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Iterator that points to newly inserted element. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a59155c23c2bd7aa7f041076d01dd1f05}\label{classpro_1_1list_a59155c23c2bd7aa7f041076d01dd1f05}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes last element of list. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a59155c23c2bd7aa7f041076d01dd1f05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a67c4600873df57381757f8bb71eecd4a}\label{classpro_1_1list_a67c4600873df57381757f8bb71eecd4a}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!pop\_front@{pop\_front}}
+\index{pop\_front@{pop\_front}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_front()}{pop\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::pop\+\_\+front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes first element of list. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a67c4600873df57381757f8bb71eecd4a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a169ea72cc0ee828e5845dba2f075ed85}\label{classpro_1_1list_a169ea72cc0ee828e5845dba2f075ed85}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Put new lement at back of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Value to copy in to the new element. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classpro_1_1list_a169ea72cc0ee828e5845dba2f075ed85_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a169ea72cc0ee828e5845dba2f075ed85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a6b270d79efe6d402f1ee1da08ea7ebc0}\label{classpro_1_1list_a6b270d79efe6d402f1ee1da08ea7ebc0}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}}}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Put new element in front of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Value to copy in to the new element. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classpro_1_1list_a6b270d79efe6d402f1ee1da08ea7ebc0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a24150f762a7253a6cc592e9c1c4fb32c}\label{classpro_1_1list_a24150f762a7253a6cc592e9c1c4fb32c}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\+\_\+reference}}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delete all elemnts which have given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & Value to delete from list. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_a24150f762a7253a6cc592e9c1c4fb32c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_acc3beab27d493b6f3f75ddb6bbe3b21b}\label{classpro_1_1list_acc3beab27d493b6f3f75ddb6bbe3b21b}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!remove\_if@{remove\_if}}
+\index{remove\_if@{remove\_if}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_if()}{remove\_if()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$class Predicate $>$ \\
+void \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::remove\+\_\+if (\begin{DoxyParamCaption}\item[{Predicate}]{pred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove elements if given condition is fulfilled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pred} & Object that predicates if element should be deleted \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpro_1_1list_acc3beab27d493b6f3f75ddb6bbe3b21b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_aa56316c87ae0a57bbd8b5d0a49d2d637}\label{classpro_1_1list_aa56316c87ae0a57bbd8b5d0a49d2d637}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!size@{size}}
+\index{size@{size}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns how many elements list contains. 
+
+\begin{DoxyReturn}{Returns}
+Number of elements in list. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classpro_1_1list_aa56316c87ae0a57bbd8b5d0a49d2d637_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a4b589a2d82ff00e36090e150d405e7dd}\label{classpro_1_1list_a4b589a2d82ff00e36090e150d405e7dd}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sorts elements in the list. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classpro_1_1list_a4b589a2d82ff00e36090e150d405e7dd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpro_1_1list_a2522a7c01a8a1ee9e995cc59aa491d38}\label{classpro_1_1list_a2522a7c01a8a1ee9e995cc59aa491d38}} 
+\index{pro::list$<$ T $>$@{pro::list$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!pro::list$<$ T $>$@{pro::list$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$class Compare $>$ \\
+\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{Compare}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sorts elements in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp} & Predicate that, taking two values of the same type as in list, returns true if first should go before second, otherwise false. Function pointer of function object. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classpro_1_1list_a2522a7c01a8a1ee9e995cc59aa491d38_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{list_8h}{list.\+h}}\end{DoxyCompactItemize}

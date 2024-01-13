@@ -1,0 +1,268 @@
+\hypertarget{classNode}{}\doxysection{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+\mbox{\hyperlink{classNode}{Node}} is class representing single node on graph. Has name, and is linked by edge to another nodes.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+
+
+Inheritance diagram for Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classNode_ae716c5198bdf4b0a810324756b0f8f11a0df509db5bcc8da1ec6af739b50791b5}{Type}} = User\+Type + 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_a1090d2bb7bd9193be765a03984b7b101}{Node}} (\mbox{\hyperlink{classGraphWidget}{Graph\+Widget}} $\ast$graph\+Widget)
+\item 
+void \mbox{\hyperlink{classNode_af761aaef36a761a90c4f148a6add914d}{add\+Edge}} (\mbox{\hyperlink{classEdge}{Edge}} $\ast$edge)
+\begin{DoxyCompactList}\small\item\em Adding edge to this node. \end{DoxyCompactList}\item 
+QList$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{classNode_a07ef0b35412d954c6e585c25377830ff}{edges}} () const
+\begin{DoxyCompactList}\small\item\em Returns list of edges connected to this node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classNode_af48418d690ba7a21aea37168beaa865a}{type}} () const override
+\item 
+void \mbox{\hyperlink{classNode_ad072483ca1a8d884964cddef6b3e7f6f}{calculate\+Forces}} ()
+\begin{DoxyCompactList}\small\item\em Function that simulates some physics interactions between nodes and edges. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classNode_a60605ce8c5281cad180745359f833cc4}{advance\+Position}} ()
+\item 
+QRectF \mbox{\hyperlink{classNode_a327ee966db1211cee4b9759bd928580a}{bounding\+Rect}} () const override
+\item 
+QPainter\+Path \mbox{\hyperlink{classNode_a0b1a8467340a3554ac57b43f56a90818}{shape}} () const override
+\item 
+void \mbox{\hyperlink{classNode_a35fd12d92a7ca5d7679c81ab6747a764}{paint}} (QPainter $\ast$painter, const QStyle\+Option\+Graphics\+Item $\ast$option, QWidget $\ast$widget) override
+\item 
+void \mbox{\hyperlink{classNode_ad79c3b9932a19a9f0d354584bb4e1b88}{add\+Names}} (std\+::string input)
+\begin{DoxyCompactList}\small\item\em Function used to change name displayed ont this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QVariant \mbox{\hyperlink{classNode_a18959a6037e96225835e07a32b4024ed}{item\+Change}} (Graphics\+Item\+Change change, const QVariant \&value) override
+\item 
+void \mbox{\hyperlink{classNode_a2412d8007e9fd9cd1e3bf7afee57906e}{mouse\+Press\+Event}} (QGraphics\+Scene\+Mouse\+Event $\ast$event) override
+\item 
+void \mbox{\hyperlink{classNode_afc1bc6e8ea97c95e6ced177e828f70e9}{mouse\+Release\+Event}} (QGraphics\+Scene\+Mouse\+Event $\ast$event) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classNode}{Node}} is class representing single node on graph. Has name, and is linked by edge to another nodes. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classNode_ae716c5198bdf4b0a810324756b0f8f11}\label{classNode_ae716c5198bdf4b0a810324756b0f8f11}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Type@{Type}!Node@{Node}}\index{Node@{Node}!Type@{Type}}}\mbox{\Hypertarget{classNode_ae716c5198bdf4b0a810324756b0f8f11a0df509db5bcc8da1ec6af739b50791b5}\label{classNode_ae716c5198bdf4b0a810324756b0f8f11a0df509db5bcc8da1ec6af739b50791b5}} 
+Type&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_a1090d2bb7bd9193be765a03984b7b101}\label{classNode_a1090d2bb7bd9193be765a03984b7b101}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGraphWidget}{Graph\+Widget}} $\ast$}]{graph\+Widget }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classNode_a1090d2bb7bd9193be765a03984b7b101_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_af761aaef36a761a90c4f148a6add914d}\label{classNode_af761aaef36a761a90c4f148a6add914d}} 
+\index{Node@{Node}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Node\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}} $\ast$}]{edge }\end{DoxyParamCaption})}
+
+
+
+Adding edge to this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edge} & \mbox{\hyperlink{classEdge}{Edge}} which is connetced to this node. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_af761aaef36a761a90c4f148a6add914d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classNode_af761aaef36a761a90c4f148a6add914d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNode_ad79c3b9932a19a9f0d354584bb4e1b88}\label{classNode_ad79c3b9932a19a9f0d354584bb4e1b88}} 
+\index{Node@{Node}!addNames@{addNames}}
+\index{addNames@{addNames}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{addNames()}{addNames()}}
+{\footnotesize\ttfamily void Node\+::add\+Names (\begin{DoxyParamCaption}\item[{std\+::string}]{input }\end{DoxyParamCaption})}
+
+
+
+Function used to change name displayed ont this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Name that shall be displayed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNode_a60605ce8c5281cad180745359f833cc4}\label{classNode_a60605ce8c5281cad180745359f833cc4}} 
+\index{Node@{Node}!advancePosition@{advancePosition}}
+\index{advancePosition@{advancePosition}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{advancePosition()}{advancePosition()}}
+{\footnotesize\ttfamily bool Node\+::advance\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classNode_a327ee966db1211cee4b9759bd928580a}\label{classNode_a327ee966db1211cee4b9759bd928580a}} 
+\index{Node@{Node}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
+{\footnotesize\ttfamily QRectF Node\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_a327ee966db1211cee4b9759bd928580a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classNode_a327ee966db1211cee4b9759bd928580a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNode_ad072483ca1a8d884964cddef6b3e7f6f}\label{classNode_ad072483ca1a8d884964cddef6b3e7f6f}} 
+\index{Node@{Node}!calculateForces@{calculateForces}}
+\index{calculateForces@{calculateForces}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{calculateForces()}{calculateForces()}}
+{\footnotesize\ttfamily void Node\+::calculate\+Forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that simulates some physics interactions between nodes and edges. 
+
+\mbox{\Hypertarget{classNode_a07ef0b35412d954c6e585c25377830ff}\label{classNode_a07ef0b35412d954c6e585c25377830ff}} 
+\index{Node@{Node}!edges@{edges}}
+\index{edges@{edges}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{edges()}{edges()}}
+{\footnotesize\ttfamily QList$<$ \mbox{\hyperlink{classEdge}{Edge}} $\ast$ $>$ Node\+::edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns list of edges connected to this node. 
+
+\begin{DoxyReturn}{Returns}
+QList of every edge connected to this node. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_a07ef0b35412d954c6e585c25377830ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNode_a18959a6037e96225835e07a32b4024ed}\label{classNode_a18959a6037e96225835e07a32b4024ed}} 
+\index{Node@{Node}!itemChange@{itemChange}}
+\index{itemChange@{itemChange}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{itemChange()}{itemChange()}}
+{\footnotesize\ttfamily QVariant Node\+::item\+Change (\begin{DoxyParamCaption}\item[{Graphics\+Item\+Change}]{change,  }\item[{const QVariant \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_a18959a6037e96225835e07a32b4024ed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNode_a2412d8007e9fd9cd1e3bf7afee57906e}\label{classNode_a2412d8007e9fd9cd1e3bf7afee57906e}} 
+\index{Node@{Node}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Node\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{QGraphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNode_afc1bc6e8ea97c95e6ced177e828f70e9}\label{classNode_afc1bc6e8ea97c95e6ced177e828f70e9}} 
+\index{Node@{Node}!mouseReleaseEvent@{mouseReleaseEvent}}
+\index{mouseReleaseEvent@{mouseReleaseEvent}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{mouseReleaseEvent()}{mouseReleaseEvent()}}
+{\footnotesize\ttfamily void Node\+::mouse\+Release\+Event (\begin{DoxyParamCaption}\item[{QGraphics\+Scene\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classNode_a35fd12d92a7ca5d7679c81ab6747a764}\label{classNode_a35fd12d92a7ca5d7679c81ab6747a764}} 
+\index{Node@{Node}!paint@{paint}}
+\index{paint@{paint}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Node\+::paint (\begin{DoxyParamCaption}\item[{QPainter $\ast$}]{painter,  }\item[{const QStyle\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{QWidget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classNode_a35fd12d92a7ca5d7679c81ab6747a764_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classNode_a0b1a8467340a3554ac57b43f56a90818}\label{classNode_a0b1a8467340a3554ac57b43f56a90818}} 
+\index{Node@{Node}!shape@{shape}}
+\index{shape@{shape}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{shape()}{shape()}}
+{\footnotesize\ttfamily QPainter\+Path Node\+::shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classNode_af48418d690ba7a21aea37168beaa865a}\label{classNode_af48418d690ba7a21aea37168beaa865a}} 
+\index{Node@{Node}!type@{type}}
+\index{type@{type}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily int Node\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{node_8h}{node.\+h}}\item 
+source/\mbox{\hyperlink{node_8cpp}{node.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,298 @@
+\hypertarget{list_8h_source}{}\doxysection{list.\+h}
+\label{list_8h_source}\index{source/list.h@{source/list.h}}
+\mbox{\hyperlink{list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef LIST\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define LIST\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <iterator>}}
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacepro}{pro}} \{}
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }internal \{}
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}} *\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{11     \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}} *\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \mbox{\hyperlink{structpro_1_1internal_1_1Base__node_abd68bc1fb3ffb333ad1c5b9833fd4683}{Base\_node}}() \{ this-\/>next = this-\/>prev = \textcolor{keyword}{this}; \}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5e86bef53c3d7feabf49999b7fabff00}{Node\_hook}}(\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}} *\textcolor{keyword}{const} position)}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         this-\/>next = position;}
+\DoxyCodeLine{18         this-\/>prev = position-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{19         position-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}} = \textcolor{keyword}{this};}
+\DoxyCodeLine{20         position-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}} = \textcolor{keyword}{this};}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{structpro_1_1internal_1_1Base__node_afacbf953c4d56c8656926f9c073f5da7}{Node\_unhook}}()}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}} *\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}} = this-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{26         \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}} *\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}} = this-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{27         prev-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}} = \mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{28         \mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}} = \mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{struct }\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{List\_node}} : \textcolor{keyword}{public} \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{Base\_node}}}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34     T \mbox{\hyperlink{structpro_1_1internal_1_1List__node_a4e8570818a38330e75e8ff0087e88bb4}{val}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \mbox{\hyperlink{structpro_1_1internal_1_1List__node_a3cc78c535941d5bf132bed5a5b50f8a3}{List\_node}}( ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     T *\mbox{\hyperlink{structpro_1_1internal_1_1List__node_aecd0744addb4cdd3e7f44f9870f95669}{Node\_valptr}}( ) \{ \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structpro_1_1internal_1_1List__node_a4e8570818a38330e75e8ff0087e88bb4}{val}}; \}}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \} \textcolor{comment}{// namespace internal}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{46 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{struct }\mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator}}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48 \textcolor{keyword}{public}:}
+\DoxyCodeLine{49     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator_a6495be36e9d5980b80ccbf9091bd1ccc}{iterator\_category}} = std::bidirectional\_iterator\_tag;}
+\DoxyCodeLine{50     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator_a13ce6f53db2a62d4ccdea11b055c0d76}{difference\_type}} = ptrdiff\_t;}
+\DoxyCodeLine{51     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator}{self}} = \mbox{\hyperlink{structpro_1_1List__iterator_a49299fd316b3ad36dc5b8ca7e4426697}{List\_iterator}};}
+\DoxyCodeLine{52     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator_a045e75674ffc0df04d3a8eefc70df3f0}{value\_type}} = T;}
+\DoxyCodeLine{53     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}{reference}} = T \&;}
+\DoxyCodeLine{54     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}{pointer}} = T *;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal::Base\_node}} *\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \mbox{\hyperlink{structpro_1_1List__iterator_a49299fd316b3ad36dc5b8ca7e4426697}{List\_iterator}}( ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \mbox{\hyperlink{structpro_1_1List__iterator_ab8362a97e8b006fa85617a2a6b7f5955}{List\_iterator}}(\mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal::Base\_node}} *init) : \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}(init) \{\}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{66     \mbox{\hyperlink{structpro_1_1List__iterator}{self}} \&\mbox{\hyperlink{structpro_1_1List__iterator_aed4d34badeb87d6c891e386a3130e9ad}{operator++}}( )}
+\DoxyCodeLine{67     \{}
+\DoxyCodeLine{68         \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}} = \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{69         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{76     \mbox{\hyperlink{structpro_1_1List__iterator}{self}} \mbox{\hyperlink{structpro_1_1List__iterator_a1cd5a1104c4544f015cd656fd7173164}{operator++}}(\textcolor{keywordtype}{int})}
+\DoxyCodeLine{77     \{}
+\DoxyCodeLine{78         \mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator}} temp = *\textcolor{keyword}{this};}
+\DoxyCodeLine{79         \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}} = \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{80         \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{81     \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{87     \mbox{\hyperlink{structpro_1_1List__iterator}{self}} \mbox{\hyperlink{structpro_1_1List__iterator_a242ea6676d3c4e1a4e5bbbc714590d77}{operator-\/-\/}}(\textcolor{keywordtype}{int})}
+\DoxyCodeLine{88     \{}
+\DoxyCodeLine{89         \mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator}} temp = *\textcolor{keyword}{this};}
+\DoxyCodeLine{90         \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}} = \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{91         \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{98     \mbox{\hyperlink{structpro_1_1List__iterator}{self}} \&\mbox{\hyperlink{structpro_1_1List__iterator_a4fef97aab39d3b9eeadc9488e26f58e2}{operator-\/-\/}}( )}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}} = \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{101         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{110     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structpro_1_1List__iterator_a26ea0d8ac40f518b0795cf507d861267}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator}} \&other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{111 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}} == other.\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}};}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structpro_1_1List__iterator_a7b9633a434654722145450e13510e4b5}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator}} \&other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{121 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{122         \textcolor{keywordflow}{return} \mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}} != other.\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}};}
+\DoxyCodeLine{123     \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{130     \mbox{\hyperlink{structpro_1_1List__iterator_a17bc15af8f3b3977167ab2c83609bad8}{reference}} \mbox{\hyperlink{structpro_1_1List__iterator_a6392533cb8bfa3e23a4f6531ac93902a}{operator*}}( )\textcolor{keyword}{ const}}
+\DoxyCodeLine{131 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{132         \textcolor{keywordflow}{return} *\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}} *\textcolor{keyword}{>}(\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}})-\/>Node\_valptr( );}
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{140     \mbox{\hyperlink{structpro_1_1List__iterator_a3b3fd19e5edc6ed5ff7ac330a76f6ba6}{pointer}} \mbox{\hyperlink{structpro_1_1List__iterator_a84c947bd3a19cf63368ae27502e68dc2}{operator-\/>}}( )\textcolor{keyword}{ const}}
+\DoxyCodeLine{141 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{142         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}} *\textcolor{keyword}{>}(\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}})-\/>Node\_valptr( );}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 \};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{struct }\mbox{\hyperlink{structpro_1_1List__const__iterator}{List\_const\_iterator}}}
+\DoxyCodeLine{147 \{}
+\DoxyCodeLine{148     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__const__iterator_ac287624c3f84691dda9cf4edc56be5d9}{difference\_type}} = ptrdiff\_t;}
+\DoxyCodeLine{149     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__const__iterator_accfb04b260789d959e63810e6ebb6d79}{iterator\_category}} = std::bidirectional\_iterator\_tag;}
+\DoxyCodeLine{150     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__const__iterator}{self}} = \mbox{\hyperlink{structpro_1_1List__const__iterator_ad05b08ffef682d936cc96145dd8ec1f8}{List\_const\_iterator}};}
+\DoxyCodeLine{151     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__const__iterator_af03c14903484585356b9cc213e1c8220}{value\_type}} = T;}
+\DoxyCodeLine{152     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__const__iterator_a1b87427b4755db80b1830c587c233c81}{pointer}} = \textcolor{keyword}{const} T *;}
+\DoxyCodeLine{153     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__const__iterator_a960dab7f38c746f018c7d1d30fd459d6}{reference}} = \textcolor{keyword}{const} T \&;}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     \textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal::Base\_node}} *\mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157     \mbox{\hyperlink{structpro_1_1List__const__iterator_ad05b08ffef682d936cc96145dd8ec1f8}{List\_const\_iterator}}( ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     \mbox{\hyperlink{structpro_1_1List__const__iterator_a0c53f7fef1ef6d667fdcacef727acedb}{List\_const\_iterator}}(\textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal::Base\_node}} *init) : \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}}(init) \{\}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{165     \mbox{\hyperlink{structpro_1_1List__const__iterator}{self}} \&\mbox{\hyperlink{structpro_1_1List__const__iterator_a379f0f6bc32d85053aee2c732ca1fbd2}{operator++}}( )}
+\DoxyCodeLine{166     \{}
+\DoxyCodeLine{167         \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}} = \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{168         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{169     \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{175     \mbox{\hyperlink{structpro_1_1List__const__iterator}{self}} \mbox{\hyperlink{structpro_1_1List__const__iterator_a209da967ff6fbe3dbc4566a5a557165d}{operator++}}(\textcolor{keywordtype}{int})}
+\DoxyCodeLine{176     \{}
+\DoxyCodeLine{177         \mbox{\hyperlink{structpro_1_1List__const__iterator}{List\_const\_iterator}} temp = *\textcolor{keyword}{this};}
+\DoxyCodeLine{178         \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}} = \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{179         \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{186     \mbox{\hyperlink{structpro_1_1List__const__iterator}{self}} \mbox{\hyperlink{structpro_1_1List__const__iterator_a968fcba2207a7ffae52e88285dda232d}{operator-\/-\/}}(\textcolor{keywordtype}{int})}
+\DoxyCodeLine{187     \{}
+\DoxyCodeLine{188         \mbox{\hyperlink{structpro_1_1List__const__iterator}{List\_const\_iterator}} temp = *\textcolor{keyword}{this};}
+\DoxyCodeLine{189         \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}} = \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{190         \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{191     \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{197     \mbox{\hyperlink{structpro_1_1List__const__iterator}{List\_const\_iterator}} \&\mbox{\hyperlink{structpro_1_1List__const__iterator_abf4f61e31aa3081ad54ce816c47e2198}{operator-\/-\/}}( )}
+\DoxyCodeLine{198     \{}
+\DoxyCodeLine{199         \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}} = \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a5bc2533ea2bd1fd465f14288ef172142}{prev}};}
+\DoxyCodeLine{200         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{201     \}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{209     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structpro_1_1List__const__iterator_abc17b4020b68824779812e7ff5a73711}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1List__const__iterator}{List\_const\_iterator}} \&other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{210 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{211         \textcolor{keywordflow}{return} \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}} == other.\mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}};}
+\DoxyCodeLine{212     \}}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{219     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structpro_1_1List__const__iterator_ac123c155b17415bdb48298e919478175}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1List__const__iterator}{List\_const\_iterator}} \&other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{220 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{221         \textcolor{keywordflow}{return} \mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}} != other.\mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}};}
+\DoxyCodeLine{222     \}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{229     \mbox{\hyperlink{structpro_1_1List__const__iterator_a960dab7f38c746f018c7d1d30fd459d6}{reference}} \mbox{\hyperlink{structpro_1_1List__const__iterator_adc4e4aebed4b62ef264bbe7f4200c989}{operator*}}( )\textcolor{keyword}{ const}}
+\DoxyCodeLine{230 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{231         \textcolor{keywordflow}{return} \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}} *\textcolor{keyword}{>}(\mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}})-\/>val;}
+\DoxyCodeLine{232     \}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{239     \mbox{\hyperlink{structpro_1_1List__const__iterator_a1b87427b4755db80b1830c587c233c81}{pointer}} \mbox{\hyperlink{structpro_1_1List__const__iterator_a39ddcec08176f508305653c8f3e13482}{operator-\/>}}( )\textcolor{keyword}{ const}}
+\DoxyCodeLine{240 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{241         \textcolor{keywordflow}{return} \&(\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}} *\textcolor{keyword}{>}(\mbox{\hyperlink{structpro_1_1List__const__iterator_a5596a7c3712299b2abe76dbd5d57ab87}{node}})-\/>value);}
+\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243 \};}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{class }\mbox{\hyperlink{classpro_1_1List__base}{List\_base}}}
+\DoxyCodeLine{246 \{}
+\DoxyCodeLine{247 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{248     \mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}} \mbox{\hyperlink{classpro_1_1List__base_a776a258160aea44de7d176ccc028bb01}{Node}};}
+\DoxyCodeLine{249     \mbox{\hyperlink{classpro_1_1List__base_a0cbbb0731a0d9bf96172ed2c83e8c2b9}{List\_base}}( ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251     \mbox{\hyperlink{classpro_1_1List__base_a0cce588a8d4d16bd640145f3a120abb1}{\string~List\_base}}( )}
+\DoxyCodeLine{252     \{}
+\DoxyCodeLine{253         \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal::Base\_node}} *curr = \mbox{\hyperlink{classNode}{Node}}.next;}
+\DoxyCodeLine{254         \textcolor{keywordflow}{while} (curr != \&\mbox{\hyperlink{classNode}{Node}} )}
+\DoxyCodeLine{255         \{}
+\DoxyCodeLine{256             \mbox{\hyperlink{structpro_1_1internal_1_1Base__node}{internal::Base\_node}} *temp = curr;}
+\DoxyCodeLine{257             curr = curr-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_a2c0f1d90a26138d0d24454f85b3cddda}{next}};}
+\DoxyCodeLine{258             \textcolor{keyword}{delete} temp;}
+\DoxyCodeLine{259         \}}
+\DoxyCodeLine{260     \}}
+\DoxyCodeLine{261 \};}
+\DoxyCodeLine{262 }
+\DoxyCodeLine{267 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T> \textcolor{keyword}{class }\mbox{\hyperlink{classpro_1_1list}{list}} : \textcolor{keyword}{protected} \mbox{\hyperlink{classpro_1_1List__base}{List\_base}}<T>}
+\DoxyCodeLine{268 \{}
+\DoxyCodeLine{269 \textcolor{keyword}{public}:}
+\DoxyCodeLine{270     \textcolor{keyword}{using }\mbox{\hyperlink{classpro_1_1list_ab5233dd07f6e8a1afba08b6dd2fc95ec}{value\_type}} = T;}
+\DoxyCodeLine{271     \textcolor{keyword}{using }\mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} = T \&;}
+\DoxyCodeLine{272     \textcolor{keyword}{using }\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\_reference}} = \textcolor{keyword}{const} T \&;}
+\DoxyCodeLine{273     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} = \mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator<T>}};}
+\DoxyCodeLine{274     \textcolor{keyword}{using }\mbox{\hyperlink{structpro_1_1List__iterator}{const\_iterator}} = \textcolor{keyword}{const} \mbox{\hyperlink{structpro_1_1List__iterator}{List\_iterator<T>}};}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{279     \mbox{\hyperlink{classpro_1_1list_a208c2313b893357c610f1732dce01997}{list}}( ) : \mbox{\hyperlink{classpro_1_1List__base}{List\_base}}<T>( ), size\_(0) \{\}}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{284     \mbox{\hyperlink{classpro_1_1list_a99c9191b56871180ca17b7826eb9e57a}{\string~list}}( ) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{289     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a6b270d79efe6d402f1ee1da08ea7ebc0}{push\_front}}(\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\_reference}} obj) \{ \mbox{\hyperlink{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae}{insert}}(\mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ), obj); \}}
+\DoxyCodeLine{294     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a169ea72cc0ee828e5845dba2f075ed85}{push\_back}}(\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\_reference}} obj) \{ \mbox{\hyperlink{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae}{insert}}(\mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( ), obj); \}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{302     \mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} \mbox{\hyperlink{classpro_1_1list_a19f4d6252ff3a486078246d8bba869ae}{insert}}(\mbox{\hyperlink{structpro_1_1List__iterator}{const\_iterator}} pos, \mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\_reference}} obj)}
+\DoxyCodeLine{303     \{}
+\DoxyCodeLine{304         \textcolor{keyword}{auto} temp = \textcolor{keyword}{new} \mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}};}
+\DoxyCodeLine{305         temp-\/>\mbox{\hyperlink{structpro_1_1internal_1_1List__node_a4e8570818a38330e75e8ff0087e88bb4}{val}} = obj;}
+\DoxyCodeLine{306         temp-\/>Node\_hook(pos.\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}});}
+\DoxyCodeLine{307         size\_++;}
+\DoxyCodeLine{308         \textcolor{keywordflow}{return} pos;}
+\DoxyCodeLine{309     \}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{314     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a67c4600873df57381757f8bb71eecd4a}{pop\_front}}( ) \{ \mbox{\hyperlink{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}{erase}}(\mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( )); \}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{319     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a59155c23c2bd7aa7f041076d01dd1f05}{pop\_back}}( ) \{ \mbox{\hyperlink{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}{erase}}(this-\/>\mbox{\hyperlink{classNode}{Node}}.prev); \}}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{325     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}{erase}}(\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} iter)}
+\DoxyCodeLine{326     \{}
+\DoxyCodeLine{327         iter.\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}}-\/>\mbox{\hyperlink{structpro_1_1internal_1_1Base__node_afacbf953c4d56c8656926f9c073f5da7}{Node\_unhook}}( );}
+\DoxyCodeLine{328         \textcolor{keyword}{delete} iter.\mbox{\hyperlink{structpro_1_1List__iterator_a414efb069f93211673bab9672ad8e9d6}{node}};}
+\DoxyCodeLine{329         -\/-\/size\_;}
+\DoxyCodeLine{330     \}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{336     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a24150f762a7253a6cc592e9c1c4fb32c}{remove}}(\mbox{\hyperlink{classpro_1_1list_a7655fd1c60a20ce6831cd0496345c5d2}{const\_reference}} val) \textcolor{comment}{// remove by value}}
+\DoxyCodeLine{337     \{}
+\DoxyCodeLine{338         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} i = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ); i != \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( ); ++i)}
+\DoxyCodeLine{339         \{}
+\DoxyCodeLine{340             \textcolor{keywordflow}{if} (*i == val)}
+\DoxyCodeLine{341             \{}
+\DoxyCodeLine{342                 \mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} temp = i++;}
+\DoxyCodeLine{343                 \mbox{\hyperlink{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}{erase}}(temp);}
+\DoxyCodeLine{344             \}}
+\DoxyCodeLine{345         \}}
+\DoxyCodeLine{346     \}}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{352     \textcolor{keyword}{template} <\textcolor{keyword}{class} Predicate>}
+\DoxyCodeLine{353     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_acc3beab27d493b6f3f75ddb6bbe3b21b}{remove\_if}}(Predicate pred) \textcolor{comment}{// remove by predicate function(functor)}}
+\DoxyCodeLine{354     \{}
+\DoxyCodeLine{355         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} i = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ); i != \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( ); ++i)}
+\DoxyCodeLine{356         \{}
+\DoxyCodeLine{357             \textcolor{keywordflow}{if} (pred(*i))}
+\DoxyCodeLine{358             \{}
+\DoxyCodeLine{359                 \mbox{\hyperlink{classpro_1_1list_acdd17d748cdadeafc3a2f80a5e95926e}{erase}}(i);}
+\DoxyCodeLine{360             \}}
+\DoxyCodeLine{361         \}}
+\DoxyCodeLine{362     \}}
+\DoxyCodeLine{363 }
+\DoxyCodeLine{368     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classpro_1_1list_aa56316c87ae0a57bbd8b5d0a49d2d637}{size}}( )\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} size\_; \}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{374     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classpro_1_1list_a22ec1c657e8ba787236bc1e78a532837}{empty}}( )\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{classNode}{Node}} == this-\/>\mbox{\hyperlink{classNode}{Node}}-\/>prev; \}}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{383     \textcolor{keyword}{template} <\textcolor{keyword}{class} Compare>}
+\DoxyCodeLine{384     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a2522a7c01a8a1ee9e995cc59aa491d38}{sort}}(Compare comp) \textcolor{comment}{// sort by Comparator function(functor)}}
+\DoxyCodeLine{385     \{}
+\DoxyCodeLine{386         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} i = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ); ++i != \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( );)}
+\DoxyCodeLine{387         \{}
+\DoxyCodeLine{388             \mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} j\_ = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( );}
+\DoxyCodeLine{389             \textcolor{keywordflow}{for} (\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} j = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ); ++j\_ != \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( ); j++)}
+\DoxyCodeLine{390             \{}
+\DoxyCodeLine{391                 \textcolor{keywordflow}{if} (comp(*j, *j\_))}
+\DoxyCodeLine{392                 \{}
+\DoxyCodeLine{393                     std::swap(*j, *j\_);}
+\DoxyCodeLine{394                 \}}
+\DoxyCodeLine{395             \}}
+\DoxyCodeLine{396         \}}
+\DoxyCodeLine{397     \}}
+\DoxyCodeLine{398 }
+\DoxyCodeLine{403     \textcolor{keywordtype}{void} \mbox{\hyperlink{classpro_1_1list_a4b589a2d82ff00e36090e150d405e7dd}{sort}}( )}
+\DoxyCodeLine{404     \{}
+\DoxyCodeLine{405         \textcolor{keywordflow}{for} (\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} i = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ); ++i != \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( );)}
+\DoxyCodeLine{406         \{}
+\DoxyCodeLine{407             \mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} j\_ = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( );}
+\DoxyCodeLine{408             \textcolor{keywordflow}{for} (\mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} j = \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ); ++j\_ != \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( ); ++j)}
+\DoxyCodeLine{409             \{}
+\DoxyCodeLine{410                 \textcolor{keywordflow}{if} (*j < *j\_)}
+\DoxyCodeLine{411                 \{}
+\DoxyCodeLine{412                     std::swap(*j, *j\_);}
+\DoxyCodeLine{413                 \}}
+\DoxyCodeLine{414             \}}
+\DoxyCodeLine{415         \}}
+\DoxyCodeLine{416     \}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418     \mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} \mbox{\hyperlink{classpro_1_1list_ac9dbd9ba54835778d7f87e5959be0aee}{front}}( ) \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classNode}{Node}}.next)-\/>Node\_valptr( ); \}}
+\DoxyCodeLine{419 }
+\DoxyCodeLine{420     \mbox{\hyperlink{classpro_1_1list_ac5676b7bfca53cdbf8e0ea925ed42142}{reference}} \mbox{\hyperlink{classpro_1_1list_a5cb876323c7bcbc759566e1d17f26a95}{back}}( ) \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{structpro_1_1internal_1_1List__node}{internal::List\_node<T>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classNode}{Node}}.prev)-\/>Node\_valptr(); \}}
+\DoxyCodeLine{426     \mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} \mbox{\hyperlink{classpro_1_1list_a00dc44b7d0f7af16cb5dcbcf106c0ee3}{begin}}( ) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}}(this-\/>\mbox{\hyperlink{classNode}{Node}}.next); \}}
+\DoxyCodeLine{427 }
+\DoxyCodeLine{432     \mbox{\hyperlink{structpro_1_1List__iterator}{iterator}} \mbox{\hyperlink{classpro_1_1list_a1a1e4328369c79b809f66794c7f7a3cd}{end}}( ) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classpro_1_1list_a05734dc9fdc4a84d1817c1d7df5b07bb}{iterator}}(\&this-\/>\mbox{\hyperlink{classNode}{Node}}); \}}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434 \textcolor{keyword}{private}:}
+\DoxyCodeLine{435     \textcolor{keywordtype}{size\_t} size\_;}
+\DoxyCodeLine{436 \};}
+\DoxyCodeLine{437 \} \textcolor{comment}{// namespace aisd}}
+\DoxyCodeLine{438 }
+\DoxyCodeLine{439 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// LIST\_H}}
+
+\end{DoxyCode}

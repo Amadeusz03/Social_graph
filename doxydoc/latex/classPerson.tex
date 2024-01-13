@@ -1,0 +1,124 @@
+\hypertarget{classPerson}{}\doxysection{Person Class Reference}
+\label{classPerson}\index{Person@{Person}}
+
+
+\mbox{\hyperlink{classPerson}{Person}} is class representing persons in graph.  
+
+
+
+
+{\ttfamily \#include $<$person.\+h$>$}
+
+
+
+Collaboration diagram for Person\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classPerson__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPerson_a236d2bb0b0df0916a7d7affa5aac83c9}{Person}} ()=default
+\item 
+\mbox{\hyperlink{classPerson_ac0999834b6e37691dd8d09e617c91cea}{Person}} (std\+::string input\+\_\+firstname, std\+::string input\+\_\+lastname)
+\item 
+void \mbox{\hyperlink{classPerson_a33249b964bb6a274fd70fc77e23022c7}{addfriend}} (\mbox{\hyperlink{classPerson}{Person}} $\ast$my\+Friend)
+\begin{DoxyCompactList}\small\item\em Add person(class Person) to list of friends(vector$<$\+Person$\ast$$>$ friends). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPerson_a026e666a43ae4261b102d653b5b528eb}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Returns combined firstname and lastname. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classPerson}{Person}} $\ast$ $>$ \& \mbox{\hyperlink{classPerson_a0b64f4122c526a4fed01c483b573f9bf}{get\+Friends}} ()
+\begin{DoxyCompactList}\small\item\em Returns vector of pointers to persons which are friends with this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classNode}{Node}} $\ast$ $>$ \mbox{\hyperlink{classPerson_a3423534d04882f8f741fbe4d902c874c}{friends\+\_\+ptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classPerson}{Person}} is class representing persons in graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPerson_a236d2bb0b0df0916a7d7affa5aac83c9}\label{classPerson_a236d2bb0b0df0916a7d7affa5aac83c9}} 
+\index{Person@{Person}!Person@{Person}}
+\index{Person@{Person}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{Person()}{Person()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Person\+::\+Person (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classPerson_ac0999834b6e37691dd8d09e617c91cea}\label{classPerson_ac0999834b6e37691dd8d09e617c91cea}} 
+\index{Person@{Person}!Person@{Person}}
+\index{Person@{Person}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{Person()}{Person()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Person\+::\+Person (\begin{DoxyParamCaption}\item[{std\+::string}]{input\+\_\+firstname,  }\item[{std\+::string}]{input\+\_\+lastname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPerson_a33249b964bb6a274fd70fc77e23022c7}\label{classPerson_a33249b964bb6a274fd70fc77e23022c7}} 
+\index{Person@{Person}!addfriend@{addfriend}}
+\index{addfriend@{addfriend}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{addfriend()}{addfriend()}}
+{\footnotesize\ttfamily void Person\+::addfriend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPerson}{Person}} $\ast$}]{my\+Friend }\end{DoxyParamCaption})}
+
+
+
+Add person(class Person) to list of friends(vector$<$\+Person$\ast$$>$ friends). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+Friend} & A person to add to list of friends. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPerson_a33249b964bb6a274fd70fc77e23022c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPerson_a026e666a43ae4261b102d653b5b528eb}\label{classPerson_a026e666a43ae4261b102d653b5b528eb}} 
+\index{Person@{Person}!getData@{getData}}
+\index{getData@{getData}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily std\+::string Person\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns combined firstname and lastname. 
+
+\begin{DoxyReturn}{Returns}
+String of combined names. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPerson_a0b64f4122c526a4fed01c483b573f9bf}\label{classPerson_a0b64f4122c526a4fed01c483b573f9bf}} 
+\index{Person@{Person}!getFriends@{getFriends}}
+\index{getFriends@{getFriends}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{getFriends()}{getFriends()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classPerson}{Person}} $\ast$ $>$ \& Person\+::get\+Friends (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns vector of pointers to persons which are friends with this object. 
+
+\begin{DoxyReturn}{Returns}
+Vector of poibnters to friends (vector$<$\+Persons $\ast$$>$). 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPerson_a3423534d04882f8f741fbe4d902c874c}\label{classPerson_a3423534d04882f8f741fbe4d902c874c}} 
+\index{Person@{Person}!friends\_ptr@{friends\_ptr}}
+\index{friends\_ptr@{friends\_ptr}!Person@{Person}}
+\doxysubsubsection{\texorpdfstring{friends\_ptr}{friends\_ptr}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classNode}{Node}}$\ast$$>$ Person\+::friends\+\_\+ptr}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{person_8h}{person.\+h}}\item 
+source/\mbox{\hyperlink{person_8cpp}{person.\+cpp}}\end{DoxyCompactItemize}

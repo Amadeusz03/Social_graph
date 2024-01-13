@@ -1,0 +1,9 @@
+<map id="DataInput::getData" name="DataInput::getData">
+<area shape="rect" id="node1" title="Extracting data from files. Using fstreams. First line is main person, and every other line is friend..." alt="" coords="5,107,152,133"/>
+<area shape="rect" id="node2" href="$classPerson.html#a33249b964bb6a274fd70fc77e23022c7" title="Add person(class Person) to list of friends(vector&lt;Person*&gt; friends)." alt="" coords="206,5,342,32"/>
+<area shape="rect" id="node3" href="$classpro_1_1list.html#a5cb876323c7bcbc759566e1d17f26a95" title=" " alt="" coords="219,56,329,83"/>
+<area shape="rect" id="node4" href="$classpro_1_1list.html#a00dc44b7d0f7af16cb5dcbcf106c0ee3" title="Returns iterator that points to first elemeint in the list." alt="" coords="217,107,331,133"/>
+<area shape="rect" id="node5" href="$classpro_1_1list.html#a1a1e4328369c79b809f66794c7f7a3cd" title="Returns iterator that points to last elemeint in the list." alt="" coords="403,157,505,184"/>
+<area shape="rect" id="node6" href="$classpro_1_1list.html#a169ea72cc0ee828e5845dba2f075ed85" title="Put new lement at back of the list." alt="" coords="200,208,348,235"/>
+<area shape="rect" id="node7" href="$classpro_1_1list.html#a19f4d6252ff3a486078246d8bba869ae" title="Inserts new element at the specified position." alt="" coords="396,208,512,235"/>
+</map>

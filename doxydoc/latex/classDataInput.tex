@@ -1,0 +1,87 @@
+\hypertarget{classDataInput}{}\doxysection{Data\+Input Class Reference}
+\label{classDataInput}\index{DataInput@{DataInput}}
+
+
+\mbox{\hyperlink{classDataInput}{Data\+Input}} is class that handles every data input operations important for graph.  
+
+
+
+
+{\ttfamily \#include $<$datainput.\+h$>$}
+
+
+
+Collaboration diagram for Data\+Input\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classDataInput__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataInput_a2f7a0caeb4c85dd073d0e0600b434d42}{Data\+Input}} ()=default
+\item 
+void \mbox{\hyperlink{classDataInput_a998d783eddb0ae34b3643e39615d6f26}{get\+Data}} (\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ \mbox{\hyperlink{classPerson}{Person}} $>$ \&persons\+List, string file)
+\begin{DoxyCompactList}\small\item\em Extracting data from files. Using fstreams. First line is main person, and every other line is friend of this person. First word is firstname, second lastname. For now empty line is also interpreted as person (maybe change later!). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classDataInput}{Data\+Input}} is class that handles every data input operations important for graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataInput_a2f7a0caeb4c85dd073d0e0600b434d42}\label{classDataInput_a2f7a0caeb4c85dd073d0e0600b434d42}} 
+\index{DataInput@{DataInput}!DataInput@{DataInput}}
+\index{DataInput@{DataInput}!DataInput@{DataInput}}
+\doxysubsubsection{\texorpdfstring{DataInput()}{DataInput()}}
+{\footnotesize\ttfamily Data\+Input\+::\+Data\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataInput_a998d783eddb0ae34b3643e39615d6f26}\label{classDataInput_a998d783eddb0ae34b3643e39615d6f26}} 
+\index{DataInput@{DataInput}!getData@{getData}}
+\index{getData@{getData}!DataInput@{DataInput}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily void Data\+Input\+::get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpro_1_1list}{pro\+::list}}$<$ \mbox{\hyperlink{classPerson}{Person}} $>$ \&}]{person\+List,  }\item[{string}]{file }\end{DoxyParamCaption})}
+
+
+
+Extracting data from files. Using fstreams. First line is main person, and every other line is friend of this person. First word is firstname, second lastname. For now empty line is also interpreted as person (maybe change later!). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em person\+List} & List of \mbox{\hyperlink{classPerson}{Person}} objects to which data shall be extracted. \\
+\hline
+{\em file} & String containg absolute path to file. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Throws} & string \char`\"{}could not open file\char`\"{}, when file doesnt exist or any problem occured. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDataInput_a998d783eddb0ae34b3643e39615d6f26_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classDataInput_a998d783eddb0ae34b3643e39615d6f26_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{datainput_8h}{datainput.\+h}}\item 
+source/\mbox{\hyperlink{datainput_8cpp}{datainput.\+cpp}}\end{DoxyCompactItemize}

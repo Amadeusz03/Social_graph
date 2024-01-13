@@ -1,0 +1,5 @@
+<map id="QGraphicsItem" name="QGraphicsItem">
+<area shape="rect" id="node1" title=" " alt="" coords="105,5,223,83"/>
+<area shape="rect" id="node2" href="$classEdge.html" title="Edge is a class representing single edge on graph. Every edge has source and destination." alt="" coords="5,175,141,340"/>
+<area shape="rect" id="node3" href="$classNode.html" title="Node is class representing single node on graph. Has name, and is linked by edge to another nodes." alt="" coords="166,131,346,384"/>
+</map>

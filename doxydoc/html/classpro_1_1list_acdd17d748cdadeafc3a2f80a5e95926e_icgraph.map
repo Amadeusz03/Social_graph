@@ -1,0 +1,7 @@
+<map id="pro::list::erase" name="pro::list::erase">
+<area shape="rect" id="node1" title="Deletes element of list pointed by iterator." alt="" coords="199,81,313,108"/>
+<area shape="rect" id="node2" href="$classpro_1_1list.html#a59155c23c2bd7aa7f041076d01dd1f05" title="Deletes last element of list." alt="" coords="7,5,149,32"/>
+<area shape="rect" id="node3" href="$classpro_1_1list.html#a67c4600873df57381757f8bb71eecd4a" title="Deletes first element of list." alt="" coords="7,56,149,83"/>
+<area shape="rect" id="node4" href="$classpro_1_1list.html#a24150f762a7253a6cc592e9c1c4fb32c" title="Delete all elemnts which have given value." alt="" coords="13,107,143,133"/>
+<area shape="rect" id="node5" href="$classpro_1_1list.html#acc3beab27d493b6f3f75ddb6bbe3b21b" title="Remove elements if given condition is fulfilled." alt="" coords="5,157,151,184"/>
+</map>

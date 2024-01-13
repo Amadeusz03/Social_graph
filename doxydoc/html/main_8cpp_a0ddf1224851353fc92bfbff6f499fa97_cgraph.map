@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,60,159"/>
+<area shape="rect" id="node2" href="$classDataInput.html#a998d783eddb0ae34b3643e39615d6f26" title="Extracting data from files. Using fstreams. First line is main person, and every other line is friend..." alt="" coords="108,107,255,133"/>
+<area shape="rect" id="node9" href="$classpro_1_1list.html#aa56316c87ae0a57bbd8b5d0a49d2d637" title="Returns how many elements list contains." alt="" coords="129,157,234,184"/>
+<area shape="rect" id="node3" href="$classPerson.html#a33249b964bb6a274fd70fc77e23022c7" title="Add person(class Person) to list of friends(vector&lt;Person*&gt; friends)." alt="" coords="309,5,445,32"/>
+<area shape="rect" id="node4" href="$classpro_1_1list.html#a5cb876323c7bcbc759566e1d17f26a95" title=" " alt="" coords="321,56,432,83"/>
+<area shape="rect" id="node5" href="$classpro_1_1list.html#a00dc44b7d0f7af16cb5dcbcf106c0ee3" title="Returns iterator that points to first elemeint in the list." alt="" coords="319,107,434,133"/>
+<area shape="rect" id="node6" href="$classpro_1_1list.html#a1a1e4328369c79b809f66794c7f7a3cd" title="Returns iterator that points to last elemeint in the list." alt="" coords="505,157,608,184"/>
+<area shape="rect" id="node7" href="$classpro_1_1list.html#a169ea72cc0ee828e5845dba2f075ed85" title="Put new lement at back of the list." alt="" coords="303,208,451,235"/>
+<area shape="rect" id="node8" href="$classpro_1_1list.html#a19f4d6252ff3a486078246d8bba869ae" title="Inserts new element at the specified position." alt="" coords="499,208,615,235"/>
+</map>
