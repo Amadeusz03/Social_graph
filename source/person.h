@@ -18,7 +18,8 @@ public:
     void addfriend(Person myFriend);
     std::string getData( );
     QVector<Person>& getFriends( );
-    std::vector<Node*> friends_ptr;
+
+    bool operator<(Person other);
 
 private:
     std::string firstname;

@@ -429,6 +429,12 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h
+ /usr/include/c++/12/random
+ /usr/include/c++/12/bits/random.h
+ /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h
+ /usr/include/c++/12/bits/random.tcc
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
@@ -453,9 +459,9 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h
- /home/kris/cpp/social_graphs_project/source/edge.h
- /home/kris/cpp/social_graphs_project/source/list.h
  /home/kris/cpp/social_graphs_project/source/person.h
+ /home/kris/cpp/social_graphs_project/source/list.h
+ /home/kris/cpp/social_graphs_project/source/edge.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h
 
@@ -1312,6 +1318,8 @@ CMakeFiles/social_graphs.dir/source/edge.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem
+ /home/kris/cpp/social_graphs_project/source/person.h
+ /home/kris/cpp/social_graphs_project/source/list.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h
@@ -1744,6 +1752,12 @@ CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h
+ /usr/include/c++/12/random
+ /usr/include/c++/12/bits/random.h
+ /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h
+ /usr/include/c++/12/bits/random.tcc
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
@@ -1768,9 +1782,9 @@ CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h
- /home/kris/cpp/social_graphs_project/source/edge.h
- /home/kris/cpp/social_graphs_project/source/list.h
  /home/kris/cpp/social_graphs_project/source/person.h
+ /home/kris/cpp/social_graphs_project/source/list.h
+ /home/kris/cpp/social_graphs_project/source/edge.h
  /usr/include/c++/12/iostream
  /usr/include/c++/12/ostream
  /usr/include/c++/12/ios
@@ -2227,6 +2241,8 @@ CMakeFiles/social_graphs.dir/source/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem
+ /home/kris/cpp/social_graphs_project/source/person.h
+ /home/kris/cpp/social_graphs_project/source/list.h
  /home/kris/cpp/social_graphs_project/source/graphwidget.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h
@@ -2260,12 +2276,16 @@ CMakeFiles/social_graphs.dir/source/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h
+ /usr/include/c++/12/random
+ /usr/include/c++/12/bits/random.h
+ /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h
+ /usr/include/c++/12/bits/random.tcc
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
  /home/kris/cpp/social_graphs_project/source/edge.h
- /home/kris/cpp/social_graphs_project/source/list.h
- /home/kris/cpp/social_graphs_project/source/person.h
  /home/kris/cpp/social_graphs_project/source/datainput.h
  /usr/include/c++/12/fstream
  /usr/include/c++/12/bits/codecvt.h
@@ -2847,6 +2867,12 @@ CMakeFiles/social_graphs.dir/source/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h
+ /usr/include/c++/12/random
+ /usr/include/c++/12/bits/random.h
+ /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h
+ /usr/include/c++/12/bits/random.tcc
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h
  /home/kris/cpp/social_graphs_project/source/edge.h
@@ -3270,6 +3296,8 @@ CMakeFiles/social_graphs.dir/source/node.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem
+ /home/kris/cpp/social_graphs_project/source/person.h
+ /home/kris/cpp/social_graphs_project/source/list.h
  /home/kris/cpp/social_graphs_project/source/edge.h
  /home/kris/cpp/social_graphs_project/source/graphwidget.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView
@@ -3306,11 +3334,15 @@ CMakeFiles/social_graphs.dir/source/node.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h
+ /usr/include/c++/12/random
+ /usr/include/c++/12/bits/random.h
+ /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h
+ /usr/include/c++/12/bits/random.tcc
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
- /home/kris/cpp/social_graphs_project/source/list.h
- /home/kris/cpp/social_graphs_project/source/person.h
  /usr/include/c++/12/iostream
  /usr/include/c++/12/ostream
  /usr/include/c++/12/ios

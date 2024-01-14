@@ -1,0 +1,15 @@
+# TODO
+- [ ] figure out circle and random placement
+- [ ] add file management to GUI
+- [ ] add algorithms
+- [ ] add fancy functions( e.g. show only mutual friends )
+- [ ] handlong exceptions
+- [ ] links from information
+- [ ] variables( e.g hobby school age )
+---
+- [x] text background on nodes
+- [x] scalable scene
+---
+- [ ] clean code
+- [ ] get some clang warning cleared
+- [ ] docs

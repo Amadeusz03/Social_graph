@@ -428,6 +428,12 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: socia
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h \
+  /usr/include/c++/12/random \
+  /usr/include/c++/12/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
+  /usr/include/c++/12/bits/random.tcc \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
@@ -452,9 +458,9 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: socia
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
-  source/edge.h \
-  source/list.h \
   source/person.h \
+  source/list.h \
+  source/edge.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h
 
@@ -1309,6 +1315,8 @@ CMakeFiles/social_graphs.dir/source/edge.cpp.o: source/edge.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
+  source/person.h \
+  source/list.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
@@ -1740,6 +1748,12 @@ CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o: source/graphwidget.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainterpath.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h \
+  /usr/include/c++/12/random \
+  /usr/include/c++/12/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
+  /usr/include/c++/12/bits/random.tcc \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
@@ -1764,9 +1778,9 @@ CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o: source/graphwidget.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
-  source/edge.h \
-  source/list.h \
   source/person.h \
+  source/list.h \
+  source/edge.h \
   /usr/include/c++/12/iostream \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
@@ -2222,6 +2236,8 @@ CMakeFiles/social_graphs.dir/source/main.cpp.o: source/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
+  source/person.h \
+  source/list.h \
   source/graphwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
@@ -2255,12 +2271,16 @@ CMakeFiles/social_graphs.dir/source/main.cpp.o: source/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h \
+  /usr/include/c++/12/random \
+  /usr/include/c++/12/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
+  /usr/include/c++/12/bits/random.tcc \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
   source/edge.h \
-  source/list.h \
-  source/person.h \
   source/datainput.h \
   /usr/include/c++/12/fstream \
   /usr/include/c++/12/bits/codecvt.h \
@@ -2841,6 +2861,12 @@ CMakeFiles/social_graphs.dir/source/mainwindow.cpp.o: source/mainwindow.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h \
+  /usr/include/c++/12/random \
+  /usr/include/c++/12/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
+  /usr/include/c++/12/bits/random.tcc \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
   source/edge.h \
@@ -3263,6 +3289,8 @@ CMakeFiles/social_graphs.dir/source/node.cpp.o: source/node.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
+  source/person.h \
+  source/list.h \
   source/edge.h \
   source/graphwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
@@ -3299,11 +3327,15 @@ CMakeFiles/social_graphs.dir/source/node.cpp.o: source/node.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h \
+  /usr/include/c++/12/random \
+  /usr/include/c++/12/bits/random.h \
+  /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
+  /usr/include/c++/12/bits/random.tcc \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
-  source/list.h \
-  source/person.h \
   /usr/include/c++/12/iostream \
   /usr/include/c++/12/ostream \
   /usr/include/c++/12/ios \
@@ -3804,9 +3836,9 @@ source/mainwindow.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h:
 
-source/person.h:
-
 source/list.h:
+
+source/person.h:
 
 source/graphwidget.cpp:
 
@@ -4024,6 +4056,8 @@ source/edge.cpp:
 
 /usr/include/c++/12/bits/fstream.tcc:
 
+/usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h:
@@ -4031,6 +4065,8 @@ source/edge.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit:
 
 /usr/include/c++/12/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator:
 
 /usr/include/c++/12/bits/unordered_map.h:
 
@@ -4045,6 +4081,8 @@ source/edge.cpp:
 /usr/include/c++/12/bits/stl_algo.h:
 
 source/main.cpp:
+
+/usr/include/c++/12/bits/random.tcc:
 
 /usr/include/c++/12/algorithm:
 
@@ -4127,6 +4165,8 @@ source/edge.h:
 /usr/include/asm-generic/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/c++/12/bits/random.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
@@ -4223,6 +4263,8 @@ source/datainput.h:
 social_graphs_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qrandom.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
@@ -4421,6 +4463,8 @@ source/node.cpp:
 /usr/include/c++/12/bits/fs_path.h:
 
 /usr/include/locale.h:
+
+/usr/include/c++/12/random:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h:
 

@@ -6,7 +6,9 @@
 #include <QKeyEvent>
 #include <QPushButton>
 #include <QGraphicsTextItem>
+#include <QRandomGenerator>
 #include <QTime>
+#include <algorithm>
 
 #include "node.h"
 #include "edge.h"

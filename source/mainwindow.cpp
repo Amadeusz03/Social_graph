@@ -52,8 +52,10 @@ void MainWindow::add( )
                                                     tr("Text files (*.txt)"));
 
     DataInput::getData(personList, fileName.toStdString( ));
+    auto temp =  centralWidget( ); //! test later
     QWidget* centralWidget = new GraphWidget(personList);
     setCentralWidget(centralWidget);
+    delete temp;
 }
 
 void MainWindow::newGraph( )

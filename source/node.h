@@ -6,6 +6,9 @@
 #include <QStyle>
 #include <QLabel>
 #include <QGraphicsTextItem>
+
+#include "person.h"
+class Person;
 class Edge;
 class GraphWidget;
 
@@ -15,7 +18,8 @@ class GraphWidget;
 class Node : public QGraphicsItem
 {
 public:
-    std::string names;
+    static size_t count;
+    std::string names; //! change to pravate
     Node(GraphWidget* graphWidget);
 
     void addEdge(Edge* edge);
@@ -32,7 +36,8 @@ public:
     void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) override;
 
     void addNames(std::string input);
-
+    void linkPerson(Person* person);
+    Person* getLinkedPerson( );
 
 protected:
     QVariant itemChange(GraphicsItemChange change, const QVariant& value) override;
@@ -44,6 +49,7 @@ private:
     QList<Edge*> edgeList;
     QPointF newPos;
     GraphWidget* graph;
+    Person* persona;
 
 };
 

@@ -26,3 +26,8 @@ QVector<Person>& Person::getFriends( )
 {
     return friends;
 }
+
+bool Person::operator<(Person other)
+{
+    return this->friends.size( ) > other.friends.size( );
+}

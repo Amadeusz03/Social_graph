@@ -37,8 +37,8 @@ void Edge::adjust( )
     double weightD = double(dest->edges( ).size( ) + 1) / 20;     // -||-                       dest
     if (length > qreal(20.))
     {
-        QPointF edgeOffsetS((line.dx( ) * (10 + 10 * weightS)) / length, (line.dy( ) * (10 + 10 * weightS)) / length);               // very sophisticated math dont really know what going on
-        QPointF edgeOffsetD((line.dx( ) * (10 + 10 * weightD)) / length, (line.dy( ) * (10 + 10 * weightD)) / length);
+        QPointF edgeOffsetS((line.dx( ) * (30 + 30 * weightS)) / length, (line.dy( ) * (30 + 30 * weightS)) / length);               // very sophisticated math dont really know what going on
+        QPointF edgeOffsetD((line.dx( ) * (30 + 30 * weightD)) / length, (line.dy( ) * (30 + 30 * weightD)) / length);
         sourcePoint = line.p1( ) + edgeOffsetS;
         destPoint = line.p2( ) - edgeOffsetD;
     }
