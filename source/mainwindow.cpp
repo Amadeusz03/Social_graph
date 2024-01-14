@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 
+QDockWidget* MainWindow::bar = nullptr;
+
 MainWindow::MainWindow(QVector<Person>& data, QWidget* parent) : QMainWindow(parent)
 {
     //ddauto newAct = new QAction(tr("&New"), this);
@@ -28,13 +30,18 @@ MainWindow::MainWindow(QVector<Person>& data, QWidget* parent) : QMainWindow(par
     fileToolBar->setAllowedAreas(Qt::TopToolBarArea | Qt::BottomToolBarArea);
     addToolBar(Qt::TopToolBarArea, fileToolBar);
 
+
+    ///
     auto contentsWindow = new QDockWidget(tr("Table of Contents"), this);
+
     contentsWindow->setAllowedAreas(Qt::LeftDockWidgetArea
                                     | Qt::RightDockWidgetArea);
     addDockWidget(Qt::LeftDockWidgetArea, contentsWindow);
 
     auto headingList = new QListWidget(contentsWindow);
     contentsWindow->setWidget(headingList);
+    bar = contentsWindow;
+
 
     setCorner(Qt::TopLeftCorner, Qt::LeftDockWidgetArea);
     setCorner(Qt::BottomLeftCorner, Qt::LeftDockWidgetArea);
@@ -42,7 +49,6 @@ MainWindow::MainWindow(QVector<Person>& data, QWidget* parent) : QMainWindow(par
     setCorner(Qt::BottomRightCorner, Qt::RightDockWidgetArea);
     QWidget* centralWidget = new GraphWidget(data);
     setCentralWidget(centralWidget);
-    menuBar( );
 }
 
 void MainWindow::add( )
@@ -52,7 +58,7 @@ void MainWindow::add( )
                                                     tr("Text files (*.txt)"));
 
     DataInput::getData(personList, fileName.toStdString( ));
-    auto temp =  centralWidget( ); //! test later
+    auto temp = centralWidget( ); //! test later
     QWidget* centralWidget = new GraphWidget(personList);
     setCentralWidget(centralWidget);
     delete temp;
@@ -62,4 +68,23 @@ void MainWindow::newGraph( )
 {
     personList.clear( );
     add( );
+}
+
+void MainWindow::listUpdate( )
+{
+    removeDockWidget(bar);
+
+    auto contentsWindow = new QDockWidget(tr("Table of Contents"), this);
+
+    bar = contentsWindow;
+    contentsWindow->setAllowedAreas(Qt::LeftDockWidgetArea
+                                    | Qt::RightDockWidgetArea);
+    addDockWidget(Qt::LeftDockWidgetArea, contentsWindow);
+
+    auto headingList = new QListWidget(contentsWindow);
+    contentsWindow->setWidget(headingList);
+
+    new QListWidgetItem(tr("Oak"), headingList);
+    new QListWidgetItem(tr("Fir"), headingList);
+    new QListWidgetItem(tr("Pine"), headingList);
 }

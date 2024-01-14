@@ -37,15 +37,35 @@ GraphWidget::GraphWidget(QVector<Person>& data, QWidget* parent)
     // std::sort(nodes.begin( ), nodes.end( ));
     // std::cout << nodes.first( )->getLinkedPerson( )->getFriends( ).size( ) << std::flush;
 
+    // int i_ = 0;
+    // for (auto i : nodes)
+    // {   //! possible bloat
+    //     for (auto j : i->getLinkedPerson( )->getFriends( ))
+    //     {
+    //         int z = 0;
+    //         for (auto k : nodes)
+    //         {
+    //             if (k->names == j.getData( ))
+    //             {
+    //                 break;
+    //             }
+    //             z++;
+    //         }
+    //         scene->addItem(new Edge(nodes[i_], nodes[z]));
+    //     }
+    //     i_++;
+    // }
+
     int i_ = 0;
-    for (auto i : nodes)
-    {   //! possible bloat
-        for (auto j : i->getLinkedPerson( )->getFriends( ))
+    for (auto i : data)
+    {   // adding edges to graph
+        //! possible bloat
+        for (auto j : i.getFriends( ))
         {
             int z = 0;
-            for (auto k : nodes)
+            for (auto k : data)
             {
-                if (k->names == j.getData( ))
+                if (k.getData( ) == j.getData( ))
                 {
                     break;
                 }

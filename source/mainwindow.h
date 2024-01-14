@@ -1,3 +1,6 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
 #include <QMainWindow>
 #include <QWidget>
 #include <QMenuBar>
@@ -10,6 +13,8 @@
 #include <QInputDialog>
 #include <QFileDialog>
 #include <QVector>
+#include <QListWidget>
+#include <QDockWidget>
 
 #include "list.h"
 #include "person.h"
@@ -24,4 +29,8 @@ public:
     MainWindow(QVector<Person>& data, QWidget* parent = nullptr);
     void add( );
     void newGraph( );
+    void listUpdate( );
+    static QDockWidget* bar;
 };
+
+#endif

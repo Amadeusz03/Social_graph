@@ -3,8 +3,9 @@
 #include "graphwidget.h"
 #include <iostream>
 
-
 size_t Node::count = 0;
+
+extern MainWindow* mainwindow;
 
 class Edge;
 Node::Node(GraphWidget* graphWidget)  // constructor
@@ -148,6 +149,7 @@ void Node::mousePressEvent(QGraphicsSceneMouseEvent* event)
 {
     update( );
     QGraphicsItem::mousePressEvent(event);
+    mainwindow->listUpdate( );
 }
 
 void Node::mouseReleaseEvent(QGraphicsSceneMouseEvent* event)

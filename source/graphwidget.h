@@ -16,6 +16,7 @@
 #include "person.h"
 
 class Node;
+class Person;
 
 /**
  * @brief GraphWidget is class that represents whole social graph. Inherited from QGraphicsView. Containg Q_OBJECT macro.

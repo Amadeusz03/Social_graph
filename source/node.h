@@ -8,6 +8,9 @@
 #include <QGraphicsTextItem>
 
 #include "person.h"
+#include "mainwindow.h"
+
+class MainWindow;
 class Person;
 class Edge;
 class GraphWidget;

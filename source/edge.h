@@ -2,29 +2,29 @@
 #define EDGE_H
 
 #include "node.h"
-
+class Node;
 /**
  * @brief Edge is a class representing single edge on graph. Every edge has source and destination.
  */
 class Edge : public QGraphicsItem
 {
 public:
-    Edge(Node *sourceNode, Node *destNode);
+    Edge(Node* sourceNode, Node* destNode);
 
-    Node *sourceNode() const;
-    Node *destNode() const;
+    Node* sourceNode( ) const;
+    Node* destNode( ) const;
 
-    void adjust();
+    void adjust( );
 
     enum { Type = UserType + 2 };
-    int type() const override { return Type; }
+    int type( ) const override { return Type; }
 
 protected:
-    QRectF boundingRect() const override;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+    QRectF boundingRect( ) const override;
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) override;
 
 private:
-    Node *source, *dest;
+    Node* source, * dest;
 
     QPointF sourcePoint;
     QPointF destPoint;

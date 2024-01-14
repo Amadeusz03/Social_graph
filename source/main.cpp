@@ -6,6 +6,9 @@
 #include "graphwidget.h"
 #include "datainput.h"
 #include "mainwindow.h"
+
+MainWindow* mainwindow;
+
 int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
@@ -13,9 +16,11 @@ int main(int argc, char* argv[])
 
     DataInput input;
     input.getData(graphPerson, "dupa.txt");
-    
+
     MainWindow* window = new MainWindow(graphPerson);
     window->show( );
+
+    mainwindow = window;
 
     return a.exec( );
 }
