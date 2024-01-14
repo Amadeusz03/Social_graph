@@ -1,25 +1,30 @@
 #include "mainwindow.h"
 
-MainWindow::MainWindow(pro::list<Person>& data, QWidget* parent) : QMainWindow(parent)
+MainWindow::MainWindow(QVector<Person>& data, QWidget* parent) : QMainWindow(parent)
 {
     //ddauto newAct = new QAction(tr("&New"), this);
     //newAct->setShortcuts(QKeySequence::New);
     //newAct->setStatusTip(tr("Create a new file"));
     //connect(newAct, &QAction::triggered, this, &MainWindow::newFile);
 
-    auto openAct = new QAction(tr("&Open..."), this);
-    openAct->setShortcuts(QKeySequence::Open);
-    openAct->setStatusTip(tr("Open an existing file"));
-    connect(openAct, &QAction::triggered, this, &MainWindow::open);
+    auto openAct = new QAction(tr("&Add"), this);
+    openAct->setStatusTip(tr("Add person file"));
+    connect(openAct, &QAction::triggered, this, &MainWindow::add);
+
+    auto newAct = new QAction(tr("&New"), this);
+    openAct->setStatusTip(tr("Create new graph"));
+    connect(newAct, &QAction::triggered, this, &MainWindow::newGraph);
 
     auto fileMenu = menuBar( )->addMenu(tr("&File"));
     //fileMenu->addAction(newAct);
     fileMenu->addAction(openAct);
+    fileMenu->addAction(newAct);
     fileMenu->addSeparator( );
 
     auto fileToolBar = addToolBar(tr("File"));
     //fileToolBar->addAction(newAct);
     fileToolBar->addAction(openAct);
+    fileToolBar->addAction(newAct);
     fileToolBar->setAllowedAreas(Qt::TopToolBarArea | Qt::BottomToolBarArea);
     addToolBar(Qt::TopToolBarArea, fileToolBar);
 
@@ -40,16 +45,19 @@ MainWindow::MainWindow(pro::list<Person>& data, QWidget* parent) : QMainWindow(p
     menuBar( );
 }
 
-void MainWindow::open( )
+void MainWindow::add( )
 {
-    pro::list<Person> graphPerson;
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
+                                                    "/home",
+                                                    tr("Text files (*.txt)"));
 
-    DataInput input;
-    bool ok;
-    QString text = QInputDialog::getText(this, tr("Label dialog"),
-                                         tr("Enter path to file"),
-                                         QLineEdit::Normal, "", &ok);
-    input.getData(graphPerson, text.toStdString( ));
-    QWidget* centralWidget = new GraphWidget(graphPerson);
+    DataInput::getData(personList, fileName.toStdString( ));
+    QWidget* centralWidget = new GraphWidget(personList);
     setCentralWidget(centralWidget);
+}
+
+void MainWindow::newGraph( )
+{
+    personList.clear( );
+    add( );
 }

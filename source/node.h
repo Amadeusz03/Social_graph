@@ -15,35 +15,36 @@ class GraphWidget;
 class Node : public QGraphicsItem
 {
 public:
-    Node(GraphWidget *graphWidget);
+    std::string names;
+    Node(GraphWidget* graphWidget);
 
-    void addEdge(Edge *edge);
-    QList<Edge *> edges() const;
+    void addEdge(Edge* edge);
+    QList<Edge*> edges( ) const;
 
     enum { Type = UserType + 1 };
-    int type() const override { return Type; }
+    int type( ) const override { return Type; }
 
-    void calculateForces();
-    bool advancePosition();
+    void calculateForces( );
+    bool advancePosition( );
 
-    QRectF boundingRect() const override;
-    QPainterPath shape() const override;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+    QRectF boundingRect( ) const override;
+    QPainterPath shape( ) const override;
+    void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget) override;
 
     void addNames(std::string input);
 
 
 protected:
-    QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
+    QVariant itemChange(GraphicsItemChange change, const QVariant& value) override;
 
-    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
-    void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
+    void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
+    void mouseReleaseEvent(QGraphicsSceneMouseEvent* event) override;
 
 private:
-    QList<Edge *> edgeList;
+    QList<Edge*> edgeList;
     QPointF newPos;
-    GraphWidget *graph;
-    std::string names;
+    GraphWidget* graph;
+
 };
 
 #endif // NODE_H

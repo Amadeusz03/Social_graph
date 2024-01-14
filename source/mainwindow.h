@@ -8,6 +8,8 @@
 #include <string>
 #include <QLineEdit>
 #include <QInputDialog>
+#include <QFileDialog>
+#include <QVector>
 
 #include "list.h"
 #include "person.h"
@@ -16,7 +18,10 @@
 
 class MainWindow : public QMainWindow
 {
+private:
+    QVector<Person> personList;
 public:
-    MainWindow(pro::list<Person>& data, QWidget* parent = nullptr);
-    void open( );
+    MainWindow(QVector<Person>& data, QWidget* parent = nullptr);
+    void add( );
+    void newGraph( );
 };

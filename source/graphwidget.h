@@ -6,7 +6,6 @@
 #include <QKeyEvent>
 #include <QPushButton>
 #include <QGraphicsTextItem>
-#include <vector>
 #include <QTime>
 
 #include "node.h"
@@ -24,27 +23,27 @@ class GraphWidget : public QGraphicsView
     Q_OBJECT    // dont know how this works :) some metaprogramming
 
 public:
-    GraphWidget(pro::list<Person> &data, QWidget *parent = nullptr);
+    GraphWidget(QVector<Person>& data, QWidget* parent = nullptr);
 
-    void itemMoved();
+    void itemMoved( );
     bool forcesEnabled;
 
 public slots:
-    void buttonClicked();
+    void buttonClicked( );
 
 protected:
-    void keyPressEvent(QKeyEvent *event) override;
-    void timerEvent(QTimerEvent *event) override;
+    void keyPressEvent(QKeyEvent* event) override;
+    void timerEvent(QTimerEvent* event) override;
 #if QT_CONFIG(wheelevent)
-    void wheelEvent(QWheelEvent *event) override;
+    void wheelEvent(QWheelEvent* event) override;
 #endif
-    void drawBackground(QPainter *painter, const QRectF &rect) override;
+    void drawBackground(QPainter* painter, const QRectF& rect) override;
 
     void scaleView(qreal scaleFactor);
 
 private:
     int timerId = 0;
-    Node *centerNode;
+    Node* centerNode;
 };
 
 #endif // GRAPHWIDGET_H

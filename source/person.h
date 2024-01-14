@@ -15,15 +15,15 @@ public:
     Person(std::string input_firstname, std::string input_lastname)
         : firstname(input_firstname), lastname(input_lastname)
     { }
-    void addfriend(Person* myFriend);
+    void addfriend(Person myFriend);
     std::string getData( );
-    std::vector<Person*>& getFriends( );
+    QVector<Person>& getFriends( );
     std::vector<Node*> friends_ptr;
 
 private:
     std::string firstname;
     std::string lastname;
-    std::vector<Person*> friends;
+    QVector<Person> friends; // dont know why pointers doesnt work seems lika a fucking bloat
 };
 
 #endif // PERSON_H

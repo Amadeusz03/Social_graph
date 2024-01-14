@@ -6,56 +6,66 @@
  * @param file String containg absolute path to file.
  * @throw Throws string "could not open file", when file doesnt exist or any problem occured.
  */
-void DataInput::getData(pro::list<Person> &personList, string file)
+void DataInput::getData(QVector<Person>& personList, string file)
 {
     ifstream stream;
     stream.open(file);
-    if (stream.fail()) {
+    if (stream.fail( ))
+    {
         throw("couldnt open file");
     }
     string line;
-    Person *thisPerson;
+    Person* thisPerson;
     bool exists = false;
 
-    if (!stream.eof()) {
+    if (!stream.eof( ))
+    {
         getline(stream, line);
         string first = line.substr(0, line.find(' '));
         string last = line.substr(line.find(' ') + 1, string::npos);
 
-        for (pro::list<Person>::iterator i = personList.begin(); i != personList.end(); ++i) {
-            if (i->getData() == line) {
+        for (QVector<Person>::iterator i = personList.begin( ); i != personList.end( ); ++i)
+        {
+            if (i->getData( ) == line)
+            {
                 thisPerson = &*i;
                 exists = true;
                 break;
             }
         }
-        if(!exists)
+        if (!exists)
         {
             thisPerson = new Person(first, last);
         }
     }
 
-    while (!stream.eof()) {
+    while (!stream.eof( ))
+    {
         getline(stream, line);
         string first(line.substr(0, line.find(' ')));
         string last(line.substr(line.find(' ') + 1, string::npos));
 
         bool change = true;
-        for (pro::list<Person>::iterator i = personList.begin(); i != personList.end(); ++i) {
-            if (i->getData() == line) {
+        for (QVector<Person>::iterator i = personList.begin( ); i != personList.end( ); ++i)
+        {
+            if (i->getData( ) == line)
+            {
                 change = false;
-                thisPerson->addfriend(&*i);
+                thisPerson->addfriend(*i);
                 break;
             }
         }
-        if (change) {
+        if (change)
+        {
             personList.push_back(*new Person(first, last));
-            thisPerson->addfriend(&personList.back());
+            //std::cout << personList.back( ).getData( ) << std::flush;
+            thisPerson->addfriend(personList.back( ));
+            //std::cout << thisPerson->getFriends( ).back( )->getData( ) << std::flush;
         }
 
     }
-    if(!exists)
+    if (!exists)
     {
-            personList.push_back(*thisPerson);
+        personList.push_back(*thisPerson);
     }
 }

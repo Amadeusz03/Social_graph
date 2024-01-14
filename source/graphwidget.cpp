@@ -5,7 +5,7 @@ extern int nodes;
 #include <iostream>
 
 class Node;
-GraphWidget::GraphWidget(pro::list<Person>& data, QWidget* parent)
+GraphWidget::GraphWidget(QVector<Person>& data, QWidget* parent)
     : QGraphicsView(parent)
 {
     forcesEnabled = false;
@@ -21,8 +21,8 @@ GraphWidget::GraphWidget(pro::list<Person>& data, QWidget* parent)
     setMinimumSize(400, 400);            // ^
     setWindowTitle(tr("Elastic Nodes"));            // | some basic preconfiguring
 
-    std::vector<Node*> nodes;
-    for (pro::list<Person>::iterator i = data.begin( ); i != data.end( ); ++i)
+    QVector<Node*> nodes;
+    for (QVector<Person>::iterator i = data.begin( ); i != data.end( ); ++i)
     {   //  adding nodes to graph
         nodes.push_back(new Node(this));
         nodes.back( )->addNames(i->getData( ));
@@ -34,12 +34,13 @@ GraphWidget::GraphWidget(pro::list<Person>& data, QWidget* parent)
     for (auto i : data)
     {   // adding edges to graph
         //! possible bloat
-        for (auto j : i.getFriends( ))
+        QVector<Person> temp = i.getFriends( );
+        for (auto j : temp)
         {
             int z = 0;
-            for (auto k : data)
+            for (auto k : nodes)
             {
-                if (k.getData( ) == j->getData( ))
+                if (k->names == j.getData())
                 {
                     break;
                 }
