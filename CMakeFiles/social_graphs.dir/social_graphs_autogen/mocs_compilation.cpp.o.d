@@ -471,4 +471,8 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
  /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/iostream \
- /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/edge.h
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/edge.h \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/moc_mainwindow.cpp \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/mainwindow.h \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/moc_node.cpp \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/node.h

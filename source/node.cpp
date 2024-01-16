@@ -5,16 +5,16 @@
 
 size_t Node::count = 0;
 
-extern MainWindow* mainwindow;
-
 class Edge;
-Node::Node(GraphWidget* graphWidget)  // constructor
+Node::Node(GraphWidget* graphWidget, MainWindow* parent)  // constructor
     : graph(graphWidget)
 {
     setFlag(ItemIsMovable);
     setFlag(ItemSendsGeometryChanges);
     setCacheMode(DeviceCoordinateCache);
     setZValue(-1);
+
+    connect(this, &Node::mousePressed, parent, &MainWindow::listUpdate);
 }
 
 /**
@@ -149,7 +149,8 @@ void Node::mousePressEvent(QGraphicsSceneMouseEvent* event)
 {
     update( );
     QGraphicsItem::mousePressEvent(event);
-    mainwindow->listUpdate( );
+    //mainwindow->listUpdate( );
+    emit mousePressed(this);
 }
 
 void Node::mouseReleaseEvent(QGraphicsSceneMouseEvent* event)

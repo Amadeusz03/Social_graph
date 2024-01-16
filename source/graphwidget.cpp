@@ -3,8 +3,7 @@
 #include <iostream>
 
 class Node;
-GraphWidget::GraphWidget(QVector<Person>& data, QWidget* parent)
-    : QGraphicsView(parent)
+GraphWidget::GraphWidget(QVector<Person>& data, MainWindow* parent)
 {
     forcesEnabled = false;
     QGraphicsScene* scene = new QGraphicsScene(this);
@@ -25,7 +24,7 @@ GraphWidget::GraphWidget(QVector<Person>& data, QWidget* parent)
     QVector<Node*> nodes;
     for (QVector<Person>::iterator i = data.begin( ); i != data.end( ); ++i)
     {   //  adding nodes to graph
-        nodes.push_back(new Node(this));
+        nodes.push_back(new Node(this, parent));
         Node::count++;
         nodes.back( )->linkPerson(i.operator->( ));
         nodes.back( )->addNames(i->getData( ));

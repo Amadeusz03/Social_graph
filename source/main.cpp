@@ -7,8 +7,6 @@
 #include "datainput.h"
 #include "mainwindow.h"
 
-MainWindow* mainwindow;
-
 int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
@@ -19,8 +17,6 @@ int main(int argc, char* argv[])
 
     MainWindow* window = new MainWindow(graphPerson);
     window->show( );
-
-    mainwindow = window;
 
     return a.exec( );
 }

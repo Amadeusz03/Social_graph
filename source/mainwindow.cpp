@@ -58,8 +58,8 @@ void MainWindow::add( )
                                                     tr("Text files (*.txt)"));
 
     DataInput::getData(personList, fileName.toStdString( ));
-    auto temp = centralWidget( ); //! test later
-    QWidget* centralWidget = new GraphWidget(personList);
+    auto temp = centralWidget( );
+    QWidget* centralWidget = new GraphWidget(personList,this);
     setCentralWidget(centralWidget);
     delete temp;
 }
@@ -70,7 +70,7 @@ void MainWindow::newGraph( )
     add( );
 }
 
-void MainWindow::listUpdate( )
+void MainWindow::listUpdate(Node* node)
 {
     removeDockWidget(bar);
 
@@ -84,7 +84,7 @@ void MainWindow::listUpdate( )
     auto headingList = new QListWidget(contentsWindow);
     contentsWindow->setWidget(headingList);
 
-    new QListWidgetItem(tr("Oak"), headingList);
+    new QListWidgetItem(tr(node->getLinkedPerson( )->getData( ).c_str( )), headingList);
     new QListWidgetItem(tr("Fir"), headingList);
     new QListWidgetItem(tr("Pine"), headingList);
 }

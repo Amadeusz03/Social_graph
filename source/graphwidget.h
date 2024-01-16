@@ -17,16 +17,17 @@
 
 class Node;
 class Person;
+class MainWindow;
 
 /**
  * @brief GraphWidget is class that represents whole social graph. Inherited from QGraphicsView. Containg Q_OBJECT macro.
  */
-class GraphWidget : public QGraphicsView
+    class GraphWidget : public QGraphicsView
 {
     Q_OBJECT    // dont know how this works :) some metaprogramming
 
 public:
-    GraphWidget(QVector<Person>& data, QWidget* parent = nullptr);
+    GraphWidget(QVector<Person>& data, MainWindow* parent = nullptr);
 
     void itemMoved( );
     bool forcesEnabled;
