@@ -3,7 +3,7 @@
 #include <iostream>
 
 class Node;
-GraphWidget::GraphWidget(QVector<Person>& data, MainWindow* parent)
+GraphWidget::GraphWidget(QVector<Person*>* data, MainWindow* parent)
 {
     forcesEnabled = false;
     QGraphicsScene* scene = new QGraphicsScene(this);
@@ -18,16 +18,16 @@ GraphWidget::GraphWidget(QVector<Person>& data, MainWindow* parent)
     setMinimumSize(400, 400);            // ^
     setWindowTitle(tr("Elastic Nodes"));            // | some basic preconfiguring
 
-    std::sort(data.begin( ), data.end( ));
+    //std::sort(data.begin( ), data.end( ));
 
     Node::count = 0;
     QVector<Node*> nodes;
-    for (QVector<Person>::iterator i = data.begin( ); i != data.end( ); ++i)
+    for (QVector<Person*>::iterator i = data->begin( ); i != data->end( ); ++i)
     {   //  adding nodes to graph
         nodes.push_back(new Node(this, parent));
         Node::count++;
-        nodes.back( )->linkPerson(i.operator->( ));
-        nodes.back( )->addNames(i->getData( ));
+        nodes.back( )->linkPerson(*i);
+        nodes.back( )->addNames((*i)->getData( ));
         scene->addItem(nodes.back( ));
         //i->friends_ptr.push_back(nodes.back( ));
     }
@@ -56,15 +56,15 @@ GraphWidget::GraphWidget(QVector<Person>& data, MainWindow* parent)
     // }
 
     int i_ = 0;
-    for (auto i : data)
+    for (auto i : *data)
     {   // adding edges to graph
         //! possible bloat
-        for (auto j : i.getFriends( ))
+        for (auto j : i->getFriends( ))
         {
             int z = 0;
-            for (auto k : data)
+            for (auto k : *data)
             {
-                if (k.getData( ) == j.getData( ))
+                if (k->getData( ) == j->getData( ))
                 {
                     break;
                 }
@@ -97,8 +97,8 @@ GraphWidget::GraphWidget(QVector<Person>& data, MainWindow* parent)
     }
 
 
-    centerNode = nodes.back( );
-    centerNode->setPos(0, 0);
+    //centerNode = nodes.back( );
+    //centerNode->setPos(0, 0);
 
     QPushButton* button = new QPushButton;
     button->setGeometry(QRect(72, -200, 128, 32));

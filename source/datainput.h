@@ -3,6 +3,8 @@
 #include <fstream>
 #include <iostream>
 #include <QVector>
+#include <sstream>
+
 #include "person.h"
 #include "list.h"
 
@@ -15,7 +17,7 @@ class DataInput
 {
 public:
     DataInput( ) = default; // default constructor
-    static void getData(QVector<Person>& personsList, string file);
+    static void getData(QVector<Person*>* personsList, string file);
 };
 
 #endif // DATAINPUT_H

@@ -10,7 +10,7 @@
 int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
-    QVector<Person> graphPerson;
+    QVector<Person*>* graphPerson = new QVector<Person*>;
 
     DataInput input;
     input.getData(graphPerson, "dupa.txt");

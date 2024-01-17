@@ -27,7 +27,7 @@ class MainWindow;
     Q_OBJECT    // dont know how this works :) some metaprogramming
 
 public:
-    GraphWidget(QVector<Person>& data, MainWindow* parent = nullptr);
+    GraphWidget(QVector<Person*>* data, MainWindow* parent = nullptr);
 
     void itemMoved( );
     bool forcesEnabled;

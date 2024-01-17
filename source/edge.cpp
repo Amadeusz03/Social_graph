@@ -82,5 +82,6 @@ Edge::Edge(Node* sourceNode, Node* destNode)
     setAcceptedMouseButtons(Qt::NoButton);
     source->addEdge(this);
     dest->addEdge(this);
+
     adjust( );
 }

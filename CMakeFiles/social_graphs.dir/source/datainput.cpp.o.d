@@ -272,7 +272,10 @@ CMakeFiles/social_graphs.dir/source/datainput.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringmatcher.h \
+ /usr/include/c++/12/sstream /usr/include/c++/12/bits/sstream.tcc \
  /home/kris/cpp/social_graphs_project/source/person.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
  /home/kris/cpp/social_graphs_project/source/list.h \
  /home/kris/cpp/social_graphs_project/source/node.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
@@ -398,8 +401,7 @@ CMakeFiles/social_graphs.dir/source/datainput.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/12/bits/locale_facets_nonio.tcc \
  /usr/include/c++/12/bits/locale_conv.h /usr/include/c++/12/iomanip \
- /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
- /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/codecvt \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/codecvt \
  /usr/include/c++/12/bits/fs_dir.h /usr/include/c++/12/bits/fs_ops.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QToolBar \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h \
@@ -430,6 +432,14 @@ CMakeFiles/social_graphs.dir/source/datainput.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtablewidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableWidgetItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSignalMapper \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsignalmapper.h \
  /home/kris/cpp/social_graphs_project/source/graphwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \

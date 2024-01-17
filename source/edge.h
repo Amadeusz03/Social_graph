@@ -1,13 +1,17 @@
 #ifndef EDGE_H
 #define EDGE_H
 
+#include <QObject>
+
 #include "node.h"
 class Node;
+
 /**
  * @brief Edge is a class representing single edge on graph. Every edge has source and destination.
  */
-class Edge : public QGraphicsItem
+class Edge :public QObject, public QGraphicsItem
 {
+    Q_OBJECT
 public:
     Edge(Node* sourceNode, Node* destNode);
 

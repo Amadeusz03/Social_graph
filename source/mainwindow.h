@@ -16,6 +16,11 @@
 #include <QListWidget>
 #include <QDockWidget>
 #include <QObject>
+#include <QTableWidget>
+#include <QHeaderView>
+#include <QTableWidgetItem>
+#include <iostream>
+#include <QSignalMapper>
 
 #include "list.h"
 #include "person.h"
@@ -24,20 +29,26 @@
 #include "node.h"
 
 class Node;
+class Edge;
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 private:
-    QVector<Person> personList;
+    QVector<Person*>* personList;
+    QTableWidget* headingTable;
+    QListWidget* linksList;
+    QTableWidget* connectionsTable;
+    Node* activatedNode;
 public:
-    MainWindow(QVector<Person>& data, QWidget* parent = nullptr);
+    MainWindow(QVector<Person*>* data, QWidget* parent = nullptr);
     void add( );
     void newGraph( );
-    static QDockWidget* bar;
+
 
 public slots:
     void listUpdate(Node* node);
+    void connectionsUpdate(QListWidgetItem* person);
 
 };
 

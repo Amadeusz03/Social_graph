@@ -383,6 +383,8 @@ CMakeFiles/social_graphs.dir/source/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /home/kris/cpp/social_graphs_project/source/person.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
  /home/kris/cpp/social_graphs_project/source/list.h \
  /home/kris/cpp/social_graphs_project/source/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
@@ -435,6 +437,14 @@ CMakeFiles/social_graphs.dir/source/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtablewidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableWidgetItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSignalMapper \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsignalmapper.h \
  /home/kris/cpp/social_graphs_project/source/graphwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \

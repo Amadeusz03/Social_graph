@@ -13,3 +13,4 @@
 - [ ] clean code
 - [ ] get some clang warning cleared
 - [ ] docs
+- [ ] destructing new objects

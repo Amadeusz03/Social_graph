@@ -24,6 +24,7 @@ class Node : public QObject, public QGraphicsItem
     Q_OBJECT
 public:
     static size_t count;
+    QList<Edge*> edgeList;
     std::string names; //! change to pravate
     Node(GraphWidget* graphWidget, MainWindow* parent = nullptr);
 
@@ -54,7 +55,6 @@ signals:
     void mousePressed(Node* node);
 
 private:
-    QList<Edge*> edgeList;
     QPointF newPos;
     GraphWidget* graph;
     Person* persona;

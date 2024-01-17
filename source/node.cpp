@@ -49,7 +49,7 @@ void Node::calculateForces( )
         QPointF vec = mapToItem(node, 0, 0);
         qreal dx = vec.x( );
         qreal dy = vec.y( );
-        double l = (2.0 + 2.0 * (Node::count / 15)) * (dx * dx + dy * dy);
+        double l = (2.5 + 2.5 * (Node::count / 15)) * (dx * dx + dy * dy);
         if (l > 0)
         {
             xvel += (dx * 150.0 / l);
@@ -57,7 +57,7 @@ void Node::calculateForces( )
         }
     }
     // Now subtract all forces pulling items together
-    double weight = (edgeList.size( ) + 1) * 80 + (Node::count * (Node::count / 3));
+    double weight = (edgeList.size( ) + 1) * 100 + (Node::count * (Node::count / 3));
     for (const Edge* edge : std::as_const(edgeList))
     {
         QPointF vec;

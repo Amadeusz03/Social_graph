@@ -91,6 +91,7 @@
   /usr/include/c++/12/bits/shared_ptr_atomic.h \
   /usr/include/c++/12/bits/shared_ptr_base.h \
   /usr/include/c++/12/bits/specfun.h \
+  /usr/include/c++/12/bits/sstream.tcc \
   /usr/include/c++/12/bits/std_abs.h \
   /usr/include/c++/12/bits/std_function.h \
   /usr/include/c++/12/bits/std_mutex.h \
@@ -178,6 +179,7 @@
   /usr/include/c++/12/pstl/glue_numeric_defs.h \
   /usr/include/c++/12/random \
   /usr/include/c++/12/ratio \
+  /usr/include/c++/12/sstream \
   /usr/include/c++/12/stdexcept \
   /usr/include/c++/12/streambuf \
   /usr/include/c++/12/string \
@@ -319,8 +321,10 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFile \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRandomGenerator \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSignalMapper \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
@@ -400,6 +404,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer_impl.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsignalmapper.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringalgorithms.h \
@@ -472,6 +477,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHeaderView \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QInputDialog \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
@@ -481,6 +487,8 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStyle \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStyleOptionGraphicsItem \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTableWidgetItem \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QToolBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
@@ -496,6 +504,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qheaderview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qinputdialog.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
@@ -512,6 +521,8 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtableview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtablewidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtoolbar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
