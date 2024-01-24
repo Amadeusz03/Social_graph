@@ -191,12 +191,13 @@ void MainWindow::listUpdate(Node* node)
     QSignalMapper* signalMapper = new QSignalMapper(this);
     linksList->clear( );
 
-    for (auto i : node->getLinkedPerson( )->getFriends( ))
+    for (auto i : node->edgeList)
     {
-        auto listItem = new QListWidgetItem(tr(i->getData( ).c_str( )), linksList);
+        auto z = (i->destNode( ) == node ? i->sourceNode( ) : i->destNode( ));
+        auto listItem = new QListWidgetItem(tr(z->getLinkedPerson( )->getData( ).c_str( )), linksList);
         activatedNode = node;
         connect(linksList, SIGNAL(itemActivated(QListWidgetItem*)), this, SLOT(connectionsUpdate(QListWidgetItem*)));
     }
 
-
+    new Dialog;
 }

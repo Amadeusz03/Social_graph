@@ -55,22 +55,109 @@ GraphWidget::GraphWidget(QVector<Person*>* data, MainWindow* parent)
     //     i_++;
     // }
 
+    // int i_ = 0;
+    // for (auto i : *data)
+    // {   // adding edges to graph
+    //     //! possible bloat
+    //     for (auto j : i->getFriends( ))
+    //     {
+    //         int z = 0;
+    //         for (auto k : *data)
+    //         {
+    //             if (k->getData( ) == j->getData( ))
+    //             {
+    //                 break;
+    //             }
+    //             z++;
+    //         }
+    //         scene->addItem(new Edge(nodes[i_], nodes[z]));
+    //     }
+    //     i_++;
+    // }
+
     int i_ = 0;
     for (auto i : *data)
-    {   // adding edges to graph
-        //! possible bloat
-        for (auto j : i->getFriends( ))
+    {//! now bloat for sure
+        int j_ = 0;
+        for (auto j : *data)
         {
-            int z = 0;
-            for (auto k : *data)
+            if (i == j)
+            {
+                j_++;
+                continue;
+            }
+
+            bool exists = false;
+            for (auto z : nodes[i_]->edgeList)
+            {
+                if (z->sourceNode( ) == nodes[j_])
+                {
+                    exists = true;
+                    break;
+                }
+            }
+            if (exists)
+            {
+                j_++;
+                continue;
+            }
+
+            int points = 0;
+            if (nodes[i_]->getLinkedPerson( )->lastname == nodes[j_]->getLinkedPerson( )->lastname)
+            {
+                points += 2;
+            }
+            if (nodes[i_]->getLinkedPerson( )->city == nodes[j_]->getLinkedPerson( )->city)
+            {
+                points += 4;
+            }
+            if (nodes[i_]->getLinkedPerson( )->street == nodes[j_]->getLinkedPerson( )->street)
+            {
+                points += 2;
+            }
+            if (nodes[i_]->getLinkedPerson( )->house_nr == nodes[j_]->getLinkedPerson( )->house_nr)
+            {
+                points += 2;
+            }
+            if (nodes[i_]->getLinkedPerson( )->hobby == nodes[j_]->getLinkedPerson( )->hobby)
+            {
+                points += 4;
+            }
+            if (nodes[i_]->getLinkedPerson( )->age == nodes[j_]->getLinkedPerson( )->age)
+            {
+                points += 1;
+            }
+            if (nodes[i_]->getLinkedPerson( )->workplace == nodes[j_]->getLinkedPerson( )->workplace)
+            {
+                points += 3;
+            }
+            for (auto z : nodes[i_]->getLinkedPerson( )->getFriends( ))
+            {
+                for (auto x : nodes[j_]->getLinkedPerson( )->getFriends( ))
+                {
+                    if (x == z)
+                    {
+                        points += 1;
+                    }
+                }
+            }
+            if (points > 7)
+            {
+                scene->addItem(new Edge(nodes[i_], nodes[j_]));
+                j_++;
+                continue;
+            }
+
+            for (auto k : i->getFriends( ))
             {
                 if (k->getData( ) == j->getData( ))
                 {
+                    scene->addItem(new Edge(nodes[i_], nodes[j_]));
                     break;
                 }
-                z++;
             }
-            scene->addItem(new Edge(nodes[i_], nodes[z]));
+
+            j_++;
         }
         i_++;
     }

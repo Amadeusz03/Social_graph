@@ -63,7 +63,8 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "qvector": "cpp",
-        "qheaderview": "cpp"
+        "qheaderview": "cpp",
+        "cinttypes": "cpp"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/g++"
 }

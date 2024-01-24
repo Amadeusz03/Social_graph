@@ -113,6 +113,14 @@ build CMakeFiles/social_graphs.dir/source/datainput.cpp.o: CXX_COMPILER__social_
   OBJECT_DIR = CMakeFiles/social_graphs.dir
   OBJECT_FILE_DIR = CMakeFiles/social_graphs.dir/source
 
+build CMakeFiles/social_graphs.dir/source/dialog.cpp.o: CXX_COMPILER__social_graphs_Debug /home/kris/cpp/social_graphs_project/source/dialog.cpp || cmake_object_order_depends_target_social_graphs
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/social_graphs.dir/source/dialog.cpp.o.d
+  FLAGS = -g -fPIC -std=gnu++17
+  INCLUDES = -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/social_graphs.dir
+  OBJECT_FILE_DIR = CMakeFiles/social_graphs.dir/source
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target social_graphs
@@ -121,7 +129,7 @@ build CMakeFiles/social_graphs.dir/source/datainput.cpp.o: CXX_COMPILER__social_
 #############################################
 # Link the executable social_graphs
 
-build social_graphs: CXX_EXECUTABLE_LINKER__social_graphs_Debug CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o CMakeFiles/social_graphs.dir/source/main.cpp.o CMakeFiles/social_graphs.dir/source/mainwindow.cpp.o CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o CMakeFiles/social_graphs.dir/source/node.cpp.o CMakeFiles/social_graphs.dir/source/edge.cpp.o CMakeFiles/social_graphs.dir/source/person.cpp.o CMakeFiles/social_graphs.dir/source/datainput.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || social_graphs_autogen social_graphs_autogen_timestamp_deps
+build social_graphs: CXX_EXECUTABLE_LINKER__social_graphs_Debug CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o CMakeFiles/social_graphs.dir/source/main.cpp.o CMakeFiles/social_graphs.dir/source/mainwindow.cpp.o CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o CMakeFiles/social_graphs.dir/source/node.cpp.o CMakeFiles/social_graphs.dir/source/edge.cpp.o CMakeFiles/social_graphs.dir/source/person.cpp.o CMakeFiles/social_graphs.dir/source/datainput.cpp.o CMakeFiles/social_graphs.dir/source/dialog.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || social_graphs_autogen social_graphs_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/social_graphs.dir
@@ -221,7 +229,7 @@ build social_graphs_autogen/timestamp social_graphs_autogen/mocs_compilation.cpp
 #############################################
 # Phony custom command for CMakeFiles/social_graphs_autogen_timestamp_deps
 
-build CMakeFiles/social_graphs_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/social_graphs_autogen_timestamp_deps: phony /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+build CMakeFiles/social_graphs_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/social_graphs_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/qt6/libexec/moc
 
 
 #############################################

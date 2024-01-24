@@ -27,6 +27,7 @@
 #include "graphwidget.h"
 #include "datainput.h"
 #include "node.h"
+#include "dialog.h"
 
 class Node;
 class Edge;

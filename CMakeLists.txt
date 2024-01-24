@@ -31,6 +31,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         source/person.h source/person.cpp
         source/list.h
         source/datainput.h source/datainput.cpp
+        source/dialog.h source/dialog.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET test3 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
