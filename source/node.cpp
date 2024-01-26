@@ -5,6 +5,9 @@
 
 size_t Node::count = 0;
 
+
+QList<QPair<QColor, QColor>> colors = { QPair<QColor,QColor>(Qt::yellow, Qt::darkYellow), QPair<QColor,QColor>(Qt::red, Qt::darkRed), QPair<QColor,QColor>(Qt::blue, Qt::darkBlue), QPair<QColor,QColor>(Qt::green, Qt::darkGreen), QPair<QColor,QColor>(Qt::magenta, Qt::darkMagenta), QPair<QColor,QColor>(Qt::cyan, Qt::darkCyan) };
+
 class Edge;
 Node::Node(GraphWidget* graphWidget, MainWindow* parent)  // constructor
     : graph(graphWidget)
@@ -13,6 +16,9 @@ Node::Node(GraphWidget* graphWidget, MainWindow* parent)  // constructor
     setFlag(ItemSendsGeometryChanges);
     setCacheMode(DeviceCoordinateCache);
     setZValue(-1);
+
+    int colori = QRandomGenerator::global( )->generate( );
+    color = colors[std::abs(colori) % 6];
 
     connect(this, &Node::mousePressed, parent, &MainWindow::listUpdate);
 }
@@ -52,8 +58,8 @@ void Node::calculateForces( )
         double l = (4.5 + 4.5 * (Node::count / 8)) * (dx * dx + dy * dy);
         if (l > 0)
         {
-            xvel += (dx * 150.0 / l);
-            yvel += (dy * 150.0 / l);
+            xvel += (dx * 150.0 * (edgeList.size( ) / 1.2) / l);
+            yvel += (dy * 150.0 * (edgeList.size( ) / 1.2) / l);
         }
     }
     // Now subtract all forces pulling items together
@@ -100,18 +106,10 @@ void Node::paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWid
     // painter->drawEllipse(-7, -7, 20, 20); // shadows
     double weight = double(edgeList.size( ) + 1) / 20;
     QRadialGradient gradient(-9 - 9 * weight, -9 - 9 * weight, 30 + 30 * weight);
-    if (option->state & QStyle::State_Sunken)
-    {
-        gradient.setCenter(3, 3);
-        gradient.setFocalPoint(3, 3);
-        gradient.setColorAt(1, QColor(Qt::yellow).lighter(120));
-        gradient.setColorAt(0, QColor(Qt::darkYellow).lighter(120));
-    }
-    else
-    {
-        gradient.setColorAt(0, Qt::yellow);
-        gradient.setColorAt(1, Qt::darkYellow);
-    }
+
+    gradient.setColorAt(0, color.first);
+    gradient.setColorAt(1, color.second);
+
     painter->setBrush(gradient);
 
     // painter->setPen(QPen(Qt::black, 0));

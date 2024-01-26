@@ -43,5 +43,10 @@
   "directory": "/home/kris/cpp/social_graphs_project/build",
   "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/dialog.cpp.o -c /home/kris/cpp/social_graphs_project/source/dialog.cpp",
   "file": "/home/kris/cpp/social_graphs_project/source/dialog.cpp"
+},
+{
+  "directory": "/home/kris/cpp/social_graphs_project/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/kris/cpp/social_graphs_project/build/social_graphs_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -fPIC -std=gnu++17 -o CMakeFiles/social_graphs.dir/source/dialogfind.cpp.o -c /home/kris/cpp/social_graphs_project/source/dialogfind.cpp",
+  "file": "/home/kris/cpp/social_graphs_project/source/dialogfind.cpp"
 }
 ]

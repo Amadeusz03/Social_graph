@@ -22,6 +22,7 @@ public:
     std::string workplace;
     sex personSex;
     std::string lastname;
+    std::string firstname;
 
     QVector<Person*> friends;
 
@@ -36,7 +37,6 @@ public:
     bool operator<(Person other);
 
 private:
-    std::string firstname;
 
      // dont know why pointers doesnt work seems lika a fucking bloat
 };

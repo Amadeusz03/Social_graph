@@ -29,7 +29,7 @@ namespace {
 struct qt_meta_stringdata_GraphWidget_t {
     uint offsetsAndSizes[6];
     char stringdata0[12];
-    char stringdata1[14];
+    char stringdata1[9];
     char stringdata2[1];
 };
 #define QT_MOC_LITERAL(ofs, len) \
@@ -37,11 +37,11 @@ struct qt_meta_stringdata_GraphWidget_t {
 Q_CONSTINIT static const qt_meta_stringdata_GraphWidget_t qt_meta_stringdata_GraphWidget = {
     {
         QT_MOC_LITERAL(0, 11),  // "GraphWidget"
-        QT_MOC_LITERAL(12, 13),  // "buttonClicked"
-        QT_MOC_LITERAL(26, 0)   // ""
+        QT_MOC_LITERAL(12, 8),  // "findNode"
+        QT_MOC_LITERAL(21, 0)   // ""
     },
     "GraphWidget",
-    "buttonClicked",
+    "findNode",
     ""
 };
 #undef QT_MOC_LITERAL
@@ -78,7 +78,7 @@ Q_CONSTINIT const QMetaObject GraphWidget::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_GraphWidget_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<GraphWidget, std::true_type>,
-        // method 'buttonClicked'
+        // method 'findNode'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -90,7 +90,7 @@ void GraphWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<GraphWidget *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->buttonClicked(); break;
+        case 0: _t->findNode(); break;
         default: ;
         }
     }

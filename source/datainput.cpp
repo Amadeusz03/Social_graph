@@ -6,6 +6,9 @@
  * @param file String containg absolute path to file.
  * @throw Throws string "could not open file", when file doesnt exist or any problem occured.
  */
+
+string DataInput::curr_file = "";
+
 void DataInput::getData(QVector<Person*>* personList, string file)
 {
     ifstream stream;
@@ -14,6 +17,7 @@ void DataInput::getData(QVector<Person*>* personList, string file)
     {
         throw("couldnt open file");
     }
+    curr_file = file;
     string line;
     Person* thisPerson;
     bool exists = false;
@@ -33,6 +37,10 @@ void DataInput::getData(QVector<Person*>* personList, string file)
         while (!stream.eof( ))
         {
             getline(stream, line);
+            if (line.empty( ))
+            {
+                break;
+            }
             string first = line.substr(0, line.find(','));
             line = line.substr(line.find(',') + 1, string::npos);
             string last = line.substr(0, line.find(','));
@@ -68,7 +76,7 @@ void DataInput::getData(QVector<Person*>* personList, string file)
             line = line.substr(line.find(',') + 1, string::npos);
             string temp = line.substr(0, line.find(','));
             line = line.substr(line.find(',') + 1, string::npos);
-            Person::sex i_sex = (temp == "M" ? Person::sex::M : Person::sex::F);
+            Person::sex i_sex = (temp == "meżczyzna" ? Person::sex::M : Person::sex::F);
 
 
             for (QVector<Person*>::iterator i = personList->begin( ); i != personList->end( ); ++i)
@@ -91,6 +99,10 @@ void DataInput::getData(QVector<Person*>* personList, string file)
             {
                 string first = line.substr(0, line.find(','));
                 line = line.substr(line.find(',') + 1, string::npos);
+                if (line == "\r")
+                {
+                    break;
+                }
                 string last = line.substr(0, line.find(','));
                 line = line.substr(line.find(',') + 1, string::npos);
 
@@ -122,4 +134,44 @@ void DataInput::getData(QVector<Person*>* personList, string file)
             }
         }
     }
+}
+
+bool DataInput::addData(QVector<Person*>* personList, QStringList& list)
+{
+    string firstname = list.at(0).toStdString( );
+    list.remove(0);
+    string lastname = list.at(0).toStdString( );;
+    list.remove(0);
+    string city = list.at(0).toStdString( );;
+    list.remove(0);
+    string street = list.at(0).toStdString( );;
+    list.remove(0);
+    string house_nr = list.at(0).toStdString( );;
+    list.remove(0);
+    string age = list.at(0).toStdString( );;
+    list.remove(0);
+    string workplace = list.at(0).toStdString( );;
+    list.remove(0);
+    string hobby = list.at(0).toStdString( );;
+    list.remove(0);
+    string friends = list.at(0).toStdString( );;
+    list.remove(0);
+    string sex = list.at(0).toStdString( );;
+    list.remove(0);
+
+    QVector<string> list_h;
+    Person* person = new Person(firstname, lastname, city, street, house_nr, list_h, stoi(age), workplace, (sex == "mężczyzna" ? Person::sex::M : Person::sex::F));
+
+    *personList << person;
+
+    ofstream stream(curr_file, ios::app);
+
+    if (!stream.good( ))
+    {
+        throw("write error");
+    }
+
+    stream << firstname << ',' << lastname << ',' << city << ',' << street << ',' << house_nr << ',' << hobby << ',' << age << ',' << workplace << ',' << sex << ',' << friends << ',';
+
+    return stream.good( );
 }

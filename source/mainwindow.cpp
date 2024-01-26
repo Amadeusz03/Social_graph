@@ -1,19 +1,29 @@
 #include "mainwindow.h"
 
+QAction* MainWindow::findAct = nullptr;
+
 MainWindow::MainWindow(QVector<Person*>* data, QWidget* parent) : QMainWindow(parent)
 {
     //ddauto newAct = new QAction(tr("&New"), this);
     //newAct->setShortcuts(QKeySequence::New);
     //newAct->setStatusTip(tr("Create a new file"));
     //connect(newAct, &QAction::triggered, this, &MainWindow::newFile);
+    personList = nullptr;
 
-    auto openAct = new QAction(tr("&Add"), this);
-    openAct->setStatusTip(tr("Add person file"));
-    connect(openAct, &QAction::triggered, this, &MainWindow::add);
+    auto openAct = new QAction(tr("&Open"), this);
+    openAct->setStatusTip(tr("Open person file"));
+    connect(openAct, &QAction::triggered, this, &MainWindow::open);
 
     auto newAct = new QAction(tr("&New"), this);
-    openAct->setStatusTip(tr("Create new graph"));
+    newAct->setStatusTip(tr("Create new graph"));
     connect(newAct, &QAction::triggered, this, &MainWindow::newGraph);
+
+    auto addAct = new QAction(tr("&Add Person"), this);
+    addAct->setStatusTip(tr("Add new person to graph"));
+    connect(addAct, &QAction::triggered, this, &MainWindow::addPerson);
+
+    findAct = new QAction(tr("&Find"), this);
+    findAct->setStatusTip(tr("Find person on graph"));
 
     auto fileMenu = menuBar( )->addMenu(tr("&File"));
     //fileMenu->addAction(newAct);
@@ -25,24 +35,26 @@ MainWindow::MainWindow(QVector<Person*>* data, QWidget* parent) : QMainWindow(pa
     //fileToolBar->addAction(newAct);
     fileToolBar->addAction(openAct);
     fileToolBar->addAction(newAct);
+    fileToolBar->addAction(addAct);
+    fileToolBar->addAction(findAct);
     fileToolBar->setAllowedAreas(Qt::TopToolBarArea | Qt::BottomToolBarArea);
     addToolBar(Qt::TopToolBarArea, fileToolBar);
 
 
     ///
-    auto contentsWindow = new QDockWidget(tr("Table of Contents"), this);
+    auto dataWindow = new QDockWidget(tr("Data"), this);
 
-    contentsWindow->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
-    addDockWidget(Qt::LeftDockWidgetArea, contentsWindow);
+    dataWindow->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
+    addDockWidget(Qt::LeftDockWidgetArea, dataWindow);
 
-    headingTable = new QTableWidget(contentsWindow);
-    headingTable->setRowCount(8);
+    headingTable = new QTableWidget(dataWindow);
+    headingTable->setRowCount(7);
     headingTable->setColumnCount(2);
     headingTable->verticalHeader( )->setVisible(false);
     headingTable->horizontalHeader( )->setVisible(false);
     headingTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-    contentsWindow->setWidget(headingTable);
+    dataWindow->setWidget(headingTable);
 
     headingTable->setItem(0, 0, new QTableWidgetItem(tr("name")));
     headingTable->setItem(1, 0, new QTableWidgetItem(tr("city")));
@@ -75,7 +87,7 @@ MainWindow::MainWindow(QVector<Person*>* data, QWidget* parent) : QMainWindow(pa
     QWidget* centralWidget = new GraphWidget(data);
     setCentralWidget(centralWidget);
 
-    auto connectionsWindow = new QDockWidget(tr("Table of Connections"), this);
+    auto connectionsWindow = new QDockWidget(tr("Data comparsion"), this);
     connectionsWindow->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     addDockWidget(Qt::LeftDockWidgetArea, connectionsWindow);
 
@@ -101,8 +113,13 @@ MainWindow::MainWindow(QVector<Person*>* data, QWidget* parent) : QMainWindow(pa
     connectionsTable->setItem(4, 1, new QTableWidgetItem(tr(" ")));
 }
 
-void MainWindow::add( )
+void MainWindow::open( )
 {
+    if (personList)
+    {
+        delete personList;
+        personList = nullptr;
+    }
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                     "/home",
                                                     tr("Text files (*.txt)"));
@@ -111,15 +128,35 @@ void MainWindow::add( )
     DataInput::getData(personList, fileName.toStdString( ));
     auto temp = centralWidget( );
     QWidget* centralWidget = new GraphWidget(personList, this);
+
+    auto signalMapper = new QSignalMapper(this);
+    connect(findAct, &QAction::triggered, dynamic_cast<GraphWidget*>(centralWidget), &GraphWidget::findNode);
+
     setCentralWidget(centralWidget);
     delete temp;
 }
 
 void MainWindow::newGraph( )
 {
+    if (personList)
+    {
+        delete personList;
+        personList = nullptr;
+    }
 
-    delete personList;
-    add( );
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
+                                                    "/home",
+                                                    tr("Text files (*.txt)"));
+    QFile file(fileName + ".txt");
+    file.open(QIODevice::WriteOnly);
+    file.close( );
+    qDebug( ) << fileName;
+    DataInput::curr_file = fileName.toStdString( );
+
+    auto temp = centralWidget( );
+    QWidget* centralWidget = new GraphWidget(nullptr, this);
+    setCentralWidget(centralWidget);
+    delete temp;
 }
 
 void MainWindow::connectionsUpdate(QListWidgetItem* item)
@@ -198,6 +235,24 @@ void MainWindow::listUpdate(Node* node)
         activatedNode = node;
         connect(linksList, SIGNAL(itemActivated(QListWidgetItem*)), this, SLOT(connectionsUpdate(QListWidgetItem*)));
     }
+}
 
-    new Dialog;
+void MainWindow::addPerson( )
+{
+    bool ok;
+    QStringList list = Dialog::getStrings(this, &ok);
+
+    if (ok)
+    {
+        DataInput::addData(personList, list);
+        foreach(auto i, list)
+        {
+            qDebug( ) << i;
+        }
+    }
+
+    auto temp = centralWidget( );
+    QWidget* centralWidget = new GraphWidget(personList, this);
+    setCentralWidget(centralWidget);
+    delete temp;
 }

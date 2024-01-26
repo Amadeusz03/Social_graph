@@ -222,6 +222,12 @@
 			null
 		],
 		[
+			"/home/kris/cpp/social_graphs_project/source/dialogfind.h",
+			"MU",
+			"CAWN4ZDDTK/moc_dialogfind.cpp",
+			null
+		],
+		[
 			"/home/kris/cpp/social_graphs_project/source/edge.h",
 			"MU",
 			"CAWN4ZDDTK/moc_edge.cpp",
@@ -321,6 +327,11 @@
 			null
 		],
 		[ "/home/kris/cpp/social_graphs_project/source/dialog.cpp", "MU", null ],
+		[
+			"/home/kris/cpp/social_graphs_project/source/dialogfind.cpp",
+			"MU",
+			null
+		],
 		[ "/home/kris/cpp/social_graphs_project/source/edge.cpp", "MU", null ],
 		[
 			"/home/kris/cpp/social_graphs_project/source/graphwidget.cpp",

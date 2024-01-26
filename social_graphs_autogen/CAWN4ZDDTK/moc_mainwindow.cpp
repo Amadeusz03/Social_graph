@@ -27,7 +27,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_MainWindow_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[18];
     char stringdata0[11];
     char stringdata1[11];
     char stringdata2[1];
@@ -36,6 +36,7 @@ struct qt_meta_stringdata_MainWindow_t {
     char stringdata5[18];
     char stringdata6[17];
     char stringdata7[7];
+    char stringdata8[10];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MainWindow_t::offsetsAndSizes) + ofs), len 
@@ -48,7 +49,8 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
         QT_MOC_LITERAL(29, 4),  // "node"
         QT_MOC_LITERAL(34, 17),  // "connectionsUpdate"
         QT_MOC_LITERAL(52, 16),  // "QListWidgetItem*"
-        QT_MOC_LITERAL(69, 6)   // "person"
+        QT_MOC_LITERAL(69, 6),  // "person"
+        QT_MOC_LITERAL(76, 9)   // "addPerson"
     },
     "MainWindow",
     "listUpdate",
@@ -57,7 +59,8 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
     "node",
     "connectionsUpdate",
     "QListWidgetItem*",
-    "person"
+    "person",
+    "addPerson"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -68,7 +71,7 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -76,12 +79,14 @@ Q_CONSTINIT static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   26,    2, 0x0a,    1 /* Public */,
-       5,    1,   29,    2, 0x0a,    3 /* Public */,
+       1,    1,   32,    2, 0x0a,    1 /* Public */,
+       5,    1,   35,    2, 0x0a,    3 /* Public */,
+       8,    0,   38,    2, 0x0a,    5 /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 6,    7,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -100,7 +105,9 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<Node *, std::false_type>,
         // method 'connectionsUpdate'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>
+        QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>,
+        // method 'addPerson'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -113,6 +120,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->listUpdate((*reinterpret_cast< std::add_pointer_t<Node*>>(_a[1]))); break;
         case 1: _t->connectionsUpdate((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 2: _t->addPerson(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -148,13 +156,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

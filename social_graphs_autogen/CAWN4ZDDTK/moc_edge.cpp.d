@@ -2,6 +2,7 @@
   /home/kris/cpp/social_graphs_project/social_graphs_autogen/moc_predefs.h \
   /home/kris/cpp/social_graphs_project/source/datainput.h \
   /home/kris/cpp/social_graphs_project/source/dialog.h \
+  /home/kris/cpp/social_graphs_project/source/dialogfind.h \
   /home/kris/cpp/social_graphs_project/source/edge.h \
   /home/kris/cpp/social_graphs_project/source/graphwidget.h \
   /home/kris/cpp/social_graphs_project/source/list.h \
@@ -474,6 +475,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDialog \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDialogButtonBox \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDockWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFormLayout \
@@ -503,6 +505,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdockwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfiledialog.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qformlayout.h \

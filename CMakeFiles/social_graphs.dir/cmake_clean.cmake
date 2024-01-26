@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/social_graphs.dir/source/datainput.cpp.o.d"
   "CMakeFiles/social_graphs.dir/source/dialog.cpp.o"
   "CMakeFiles/social_graphs.dir/source/dialog.cpp.o.d"
+  "CMakeFiles/social_graphs.dir/source/dialogfind.cpp.o"
+  "CMakeFiles/social_graphs.dir/source/dialogfind.cpp.o.d"
   "CMakeFiles/social_graphs.dir/source/edge.cpp.o"
   "CMakeFiles/social_graphs.dir/source/edge.cpp.o.d"
   "CMakeFiles/social_graphs.dir/source/graphwidget.cpp.o"

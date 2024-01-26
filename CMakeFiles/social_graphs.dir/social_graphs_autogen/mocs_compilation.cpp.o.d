@@ -353,6 +353,14 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDialogButtonBox \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialogbuttonbox.h \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/moc_dialogfind.cpp \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/dialogfind.h \
  /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/moc_edge.cpp \
  /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/edge.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
@@ -376,14 +384,12 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStyle \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsTextItem \
- /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/person.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QPair \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/person.h \
  /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/list.h \
  /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
@@ -468,7 +474,6 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
@@ -489,6 +494,7 @@ CMakeFiles/social_graphs.dir/social_graphs_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTime \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/edge.h \
+ /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/dialogfind.h \
  /home/kris/cpp/social_graphs_project/social_graphs_autogen/CAWN4ZDDTK/../../source/datainput.h \
  /usr/include/c++/12/fstream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \

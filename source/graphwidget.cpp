@@ -5,7 +5,6 @@
 class Node;
 GraphWidget::GraphWidget(QVector<Person*>* data, MainWindow* parent)
 {
-    forcesEnabled = false;
     QGraphicsScene* scene = new QGraphicsScene(this);
     scene->setItemIndexMethod(QGraphicsScene::NoIndex);
     //scene->setSceneRect(-1000, -1000, 2000, 2000);
@@ -18,10 +17,11 @@ GraphWidget::GraphWidget(QVector<Person*>* data, MainWindow* parent)
     setMinimumSize(400, 400);            // ^
     setWindowTitle(tr("Elastic Nodes"));            // | some basic preconfiguring
 
-    //std::sort(data.begin( ), data.end( ));
-
+    if (!data)
+    {
+        return;
+    }
     Node::count = 0;
-    QVector<Node*> nodes;
     for (QVector<Person*>::iterator i = data->begin( ); i != data->end( ); ++i)
     {   //  adding nodes to graph
         nodes.push_back(new Node(this, parent));
@@ -29,51 +29,7 @@ GraphWidget::GraphWidget(QVector<Person*>* data, MainWindow* parent)
         nodes.back( )->linkPerson(*i);
         nodes.back( )->addNames((*i)->getData( ));
         scene->addItem(nodes.back( ));
-        //i->friends_ptr.push_back(nodes.back( ));
     }
-
-    // std::cout << nodes.first( )->getLinkedPerson( )->getFriends( ).size( ) << std::flush;
-    // std::sort(nodes.begin( ), nodes.end( ));
-    // std::cout << nodes.first( )->getLinkedPerson( )->getFriends( ).size( ) << std::flush;
-
-    // int i_ = 0;
-    // for (auto i : nodes)
-    // {   //! possible bloat
-    //     for (auto j : i->getLinkedPerson( )->getFriends( ))
-    //     {
-    //         int z = 0;
-    //         for (auto k : nodes)
-    //         {
-    //             if (k->names == j.getData( ))
-    //             {
-    //                 break;
-    //             }
-    //             z++;
-    //         }
-    //         scene->addItem(new Edge(nodes[i_], nodes[z]));
-    //     }
-    //     i_++;
-    // }
-
-    // int i_ = 0;
-    // for (auto i : *data)
-    // {   // adding edges to graph
-    //     //! possible bloat
-    //     for (auto j : i->getFriends( ))
-    //     {
-    //         int z = 0;
-    //         for (auto k : *data)
-    //         {
-    //             if (k->getData( ) == j->getData( ))
-    //             {
-    //                 break;
-    //             }
-    //             z++;
-    //         }
-    //         scene->addItem(new Edge(nodes[i_], nodes[z]));
-    //     }
-    //     i_++;
-    // }
 
     int i_ = 0;
     for (auto i : *data)
@@ -163,35 +119,46 @@ GraphWidget::GraphWidget(QVector<Person*>* data, MainWindow* parent)
     }
 
     QPoint center(0, 0);
+    QVector<QPair<int, int>> cor;
     for (int i = 0; i < nodes.size( ); i++)
     {   // setting positions of every node not working quite well
-        if (nodes[i]->getLinkedPerson( )->getFriends( ).size( ) > 2)
+        int xval = QRandomGenerator::global( )->generate( );
+        int yval = QRandomGenerator::global( )->generate( );
+        int x = (abs(xval) % 5000) - 1000;
+        int y = (abs(yval) % 5000) - 1000;
+        QPair<int, int> curr;
+        bool unique = true;
+        int i_ = 0;
+        foreach(curr, cor)
         {
-            int xval = QRandomGenerator::global( )->generate( );
-            int yval = QRandomGenerator::global( )->generate( );
-            center.setX((abs(xval) % 1980) - 1000);
-            center.setY((abs(yval) % 1980) - 1000);
-            nodes[i++]->setPos(center.x( ), center.y( ));
-            for (double angle = 0; angle <= 2 * M_PI; angle += (2 * M_PI / nodes.size( )))
+            if (!unique)
             {
-                if (i >= nodes.size( ))
+                break;
+            }
+            int j_ = 0;
+            QPair<int, int> any;
+            foreach(any, cor)
+            {
+                if (i_ == j_)
                 {
+                    continue;
+                }
+                if (any == curr)
+                {
+                    unique = false;
                     break;
                 }
-                nodes[i++]->setPos(center.x( ) + 100 * cos(angle), center.y( ) + 100 * sin(angle));
+                j_++;
             }
+            i_++;
         }
+        if (!unique)
+        {
+            i--;
+            continue;
+        }
+        nodes[i]->setPos(x, y);
     }
-
-
-    //centerNode = nodes.back( );
-    //centerNode->setPos(0, 0);
-
-    QPushButton* button = new QPushButton;
-    button->setGeometry(QRect(72, -200, 128, 32));
-    button->setText("fizyka");
-    QObject::connect(button, SIGNAL(clicked( )), this, SLOT(buttonClicked( )));
-    scene->addWidget(button);
 }
 
 void GraphWidget::itemMoved( )
@@ -233,23 +200,20 @@ void GraphWidget::timerEvent(QTimerEvent* event)
             nodes << node;
     }
 
-    if (forcesEnabled)
+    for (Node* node : std::as_const(nodes))
+        node->calculateForces( );
+
+    bool itemsMoved = false;
+    for (Node* node : std::as_const(nodes))
     {
-        for (Node* node : std::as_const(nodes))
-            node->calculateForces( );
+        if (node->advancePosition( ))
+            itemsMoved = true;
+    }
 
-        bool itemsMoved = false;
-        for (Node* node : std::as_const(nodes))
-        {
-            if (node->advancePosition( ))
-                itemsMoved = true;
-        }
-
-        if (!itemsMoved)
-        {
-            killTimer(timerId);
-            timerId = 0;
-        }
+    if (!itemsMoved)
+    {
+        killTimer(timerId);
+        timerId = 0;
     }
 }
 
@@ -303,7 +267,31 @@ void GraphWidget::scaleView(qreal scaleFactor)
     scale(scaleFactor, scaleFactor);
 }
 
-void GraphWidget::buttonClicked( )
+void GraphWidget::findNode( )
 {
-    forcesEnabled = !forcesEnabled;
+    qreal x;
+    qreal y;
+
+    QStringList str = DialogFind::getStrings(this, nullptr);
+
+    string txt;
+    txt.append(str.at(0).toStdString( ));
+    txt.append(str.at(1).toStdString( ));
+
+    for (auto i : nodes)
+    {
+        if (txt == (i->getLinkedPerson( )->firstname + i->getLinkedPerson( )->lastname))
+        {
+            x = i->x( );
+            y = i->y( );
+            break;
+        }
+    }
+
+    // foreach(auto i, nodes)
+    // {
+    //     i->moveBy(this->rect( ).center( ).x( ) - x, this->rect( ).center( ).y( ) - y);
+    // }
+
+    this->fitInView(x - 400, y - 400, 800, 800, Qt::KeepAspectRatio);
 }

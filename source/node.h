@@ -7,6 +7,8 @@
 #include <QLabel>
 #include <QGraphicsTextItem>
 #include <QObject>
+#include <QList>
+#include <QPair>
 
 #include "person.h"
 #include "mainwindow.h"
@@ -58,7 +60,7 @@ private:
     QPointF newPos;
     GraphWidget* graph;
     Person* persona;
-
+    QPair<QColor, QColor> color;
 };
 
 #endif // NODE_H

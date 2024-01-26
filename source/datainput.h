@@ -15,9 +15,14 @@ using namespace std;
  */
 class DataInput
 {
+private:
+
 public:
+    static string curr_file;
+
     DataInput( ) = default; // default constructor
     static void getData(QVector<Person*>* personsList, string file);
+    static bool addData(QVector<Person*>* personList, QStringList& list);
 };
 
 #endif // DATAINPUT_H

@@ -259,6 +259,30 @@ source/dialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/social_graphs.dir/build.make CMakeFiles/social_graphs.dir/source/dialog.cpp.s
 .PHONY : source/dialog.cpp.s
 
+source/dialogfind.o: source/dialogfind.cpp.o
+.PHONY : source/dialogfind.o
+
+# target to build an object file
+source/dialogfind.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/social_graphs.dir/build.make CMakeFiles/social_graphs.dir/source/dialogfind.cpp.o
+.PHONY : source/dialogfind.cpp.o
+
+source/dialogfind.i: source/dialogfind.cpp.i
+.PHONY : source/dialogfind.i
+
+# target to preprocess a source file
+source/dialogfind.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/social_graphs.dir/build.make CMakeFiles/social_graphs.dir/source/dialogfind.cpp.i
+.PHONY : source/dialogfind.cpp.i
+
+source/dialogfind.s: source/dialogfind.cpp.s
+.PHONY : source/dialogfind.s
+
+# target to generate assembly for a file
+source/dialogfind.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/social_graphs.dir/build.make CMakeFiles/social_graphs.dir/source/dialogfind.cpp.s
+.PHONY : source/dialogfind.cpp.s
+
 source/edge.o: source/edge.cpp.o
 .PHONY : source/edge.o
 
@@ -426,6 +450,9 @@ help:
 	@echo "... source/dialog.o"
 	@echo "... source/dialog.i"
 	@echo "... source/dialog.s"
+	@echo "... source/dialogfind.o"
+	@echo "... source/dialogfind.i"
+	@echo "... source/dialogfind.s"
 	@echo "... source/edge.o"
 	@echo "... source/edge.i"
 	@echo "... source/edge.s"

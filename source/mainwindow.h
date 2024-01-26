@@ -41,15 +41,17 @@ private:
     QListWidget* linksList;
     QTableWidget* connectionsTable;
     Node* activatedNode;
+    static QAction* findAct;
 public:
     MainWindow(QVector<Person*>* data, QWidget* parent = nullptr);
-    void add( );
+    void open( );
     void newGraph( );
 
 
 public slots:
     void listUpdate(Node* node);
     void connectionsUpdate(QListWidgetItem* person);
+    void addPerson( );
 
 };
 

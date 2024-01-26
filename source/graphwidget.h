@@ -8,12 +8,14 @@
 #include <QGraphicsTextItem>
 #include <QRandomGenerator>
 #include <QTime>
+#include <QPair>
 #include <algorithm>
 
 #include "node.h"
 #include "edge.h"
 #include "list.h"
 #include "person.h"
+#include "dialogfind.h"
 
 class Node;
 class Person;
@@ -22,18 +24,17 @@ class MainWindow;
 /**
  * @brief GraphWidget is class that represents whole social graph. Inherited from QGraphicsView. Containg Q_OBJECT macro.
  */
-    class GraphWidget : public QGraphicsView
+class GraphWidget : public QGraphicsView
 {
-    Q_OBJECT    // dont know how this works :) some metaprogramming
+    Q_OBJECT
 
 public:
     GraphWidget(QVector<Person*>* data, MainWindow* parent = nullptr);
 
     void itemMoved( );
-    bool forcesEnabled;
-
+    QVector<Node*> nodes;
 public slots:
-    void buttonClicked( );
+    void findNode( );
 
 protected:
     void keyPressEvent(QKeyEvent* event) override;
